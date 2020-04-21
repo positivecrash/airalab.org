@@ -7,8 +7,6 @@
        	</div>
 
 		<div class="shrimps" v-view.once>
-			
-			<!-- <div class="shrimps__pack"><ShrimpPack/></div> -->
 
 			<g-image class="shrimps__pack" alt="" src="~/assets/images/shrimp-pack.svg"/>
 
@@ -47,39 +45,6 @@
 			<div class="shrimps__pack_6"><ShrimpPack2/></div>
 			<div class="shrimps__pack_7"><ShrimpPack3/></div>
 
-
-			<!-- <g-image class="shrimps__pack" alt="" src="~/assets/images/shrimp-pack.svg"/>
-			<g-image class="shrimps__ice shrimps__ice_1" alt="" src="~/assets/images/shrimp-ice.svg"/>
-			<g-image class="shrimps__ice shrimps__ice_2" alt="" src="~/assets/images/shrimp-ice.svg"/>
-			<g-image class="shrimps__ice shrimps__ice_3" alt="" src="~/assets/images/shrimp-ice.svg"/>
-			<g-image class="shrimps__ice shrimps__ice_4" alt="" src="~/assets/images/shrimp-ice.svg"/>
-			<g-image class="shrimps__ice shrimps__ice_5" alt="" src="~/assets/images/shrimp-ice.svg"/>
-			<g-image class="shrimps__ice shrimps__ice_6" alt="" src="~/assets/images/shrimp-ice.svg"/>
-			<g-image class="shrimps__ice shrimps__ice_7" alt="" src="~/assets/images/shrimp-ice.svg"/>
-			<g-image class="shrimps__ice shrimps__ice_8" alt="" src="~/assets/images/shrimp-ice.svg"/>
-			<div class="shrimps__right">
-				<g-image class="shrimps__right__item shrimps__right__item_1" alt="" src="~/assets/images/shrimp.svg"/>
-				<g-image class="shrimps__right__item shrimps__right__item_2" alt="" src="~/assets/images/shrimp.svg"/>
-				<g-image class="shrimps__right__item shrimps__right__item_3" alt="" src="~/assets/images/shrimp.svg"/>
-				<g-image class="shrimps__right__item shrimps__right__item_4" alt="" src="~/assets/images/shrimp.svg"/>
-				<g-image class="shrimps__right__item shrimps__right__item_5" alt="" src="~/assets/images/shrimp.svg"/>
-			</div>
-			<div class="shrimps__left">
-				<g-image class="shrimps__left__item shrimps__left__item_1" alt="" src="~/assets/images/shrimp.svg"/>
-				<g-image class="shrimps__left__item shrimps__left__item_2" alt="" src="~/assets/images/shrimp.svg"/>
-				<g-image class="shrimps__left__item shrimps__left__item_3" alt="" src="~/assets/images/shrimp.svg"/>
-				<g-image class="shrimps__left__item shrimps__left__item_4" alt="" src="~/assets/images/shrimp.svg"/>
-				<g-image class="shrimps__left__item shrimps__left__item_5" alt="" src="~/assets/images/shrimp.svg"/>
-			</div>
-			<g-image class="shrimps__qr" alt="" src="~/assets/images/shrimp-qr.svg"/>
-			<g-image class="shrimps__pack_2" alt="" src="~/assets/images/shrimp-pack-2.svg"/>
-			<g-image class="shrimps__pack_3" alt="" src="~/assets/images/shrimp-pack-3.svg"/>
-			<g-image class="shrimps__pack_4" alt="" src="~/assets/images/shrimp-pack-2.svg"/>
-
-			<g-image class="shrimps__pack_5" alt="" src="~/assets/images/shrimp-pack-3.svg"/>
-			<g-image class="shrimps__pack_6" alt="" src="~/assets/images/shrimp-pack-2.svg"/>
-			<g-image class="shrimps__pack_7" alt="" src="~/assets/images/shrimp-pack-3.svg"/> -->
-
 		</div>
 		
 		<div class="w-text t-align-center">
@@ -92,25 +57,51 @@
 			<div class="w-text">
 				<h2>Как это работает</h2>
 				<p class="t-align-center">У вас есть 2 варианта выпуска цифрового блокчейн сертификата для вашей продукции или услуги:</p>
+			</div>
 
-				<div class="stampTech">
-					<div class="stampTech__option">
-						<div class="stampTech__option__img">
+			<div class="stampTech">
+				<div class="stampTech__options w-text">
+					<div class="stampTech__options__item">
+						<div class="stampTech__options__item__img">
 							<b>1</b>
 							<StampTech1/>
 						</div>
 						<p><strong>Выпуск сертификата оператором вручную в заранее подготовленном децентрализованном приложении</strong></p>
 					</div>
-					<div class="stampTech__option">
-						<div class="stampTech__option__img">
+					<div class="stampTech__options__item">
+						<div class="stampTech__options__item__img">
 							<b>2</b>
 							<StampTech2/>
 						</div>
 						<p><strong>Выпуск сертификата в фоновом режиме автоматически, на основе данных, получаемых от настроенных IoT устройств</strong></p>
 					</div>
 				</div>
+
+				<div class="stampTech__product" v-view.once>
+					<div class="stampTech__product__gray">
+
+						<g-image class="item" alt="" src="@/assets/images/product_1_g.svg"/>
+						<g-image class="item" alt="" src="@/assets/images/product_1_g.svg"/>
+						<g-image class="item" alt="" src="@/assets/images/product_1_g.svg"/>
+						<g-image class="item" alt="" src="@/assets/images/product_1_g.svg"/>
+
+
+					</div>
+					<div class="stampTech__product__color">
+						<g-image class="item" alt="" src="@/assets/images/product_1_c.svg"/>
+						<g-image class="item" alt="" src="@/assets/images/product_1_c.svg"/>
+						<g-image class="item" alt="" src="@/assets/images/product_1_c.svg"/>
+						<g-image class="item" alt="" src="@/assets/images/product_1_c.svg"/>
+					</div>
+				</div>
 			</div>
+			
 		</section>
+
+		<div class="w-text t-align-center">
+	        <h2>Схема сотрудничества</h2>
+	        <g-link :to="'mailto:'+$static.metadata.email" target="_blank" class="btn-red">Оставить заявку</g-link>
+      	</div>
 
 	</div>
 
@@ -292,71 +283,116 @@
 
 
 	.stampTech{
-		box-sizing: border-box;
-		display: table;
-		width: 100%;
-		table-layout: fixed;
 
-		margin: 2rem 0;
+		position: relative;
+		margin-bottom: var(--space);
 
-		&__option{
-			display: table-cell;
-			padding: 2rem 4rem;
-			background-color: var(--color-light);
+		&__options{
+			box-sizing: border-box;
+			display: table;
+			// width: 100%;
+			table-layout: fixed;
+
+			margin-top: var(--space);
 
 			position: relative;
-			&:after{
-				content:"";
-				width: 1px;
-				position: absolute;
-				top: -1rem;
-				bottom: -1rem;
-				right: 0;
-				background-color: var(--color-yellow);
-			}
+			z-index: 1;
 
-			&:before{
-				display: none;
-				content:"";
-				height: 1px;
-				position: absolute;
-				bottom: 0;
-				right: 0;
-				left: 0;
-				background-color: var(--color-yellow);
-			}
+			&__item{
+				display: table-cell;
+				padding: 2rem 4rem;
+				background-color: var(--color-light);
+				width: 50%;
+				box-sizing: border-box;
 
-			&:last-child{
-				&:after{
-					display: none;
-				}
-			}
-
-			&__img{
-				height: 240px;
 				position: relative;
-				margin-bottom: var(--space);
+				&:after{
+					content:"";
+					width: 1px;
+					position: absolute;
+					top: -1rem;
+					bottom: -1rem;
+					right: 0;
+					background-color: var(--color-yellow);
+				}
 
-				svg{
+				&:before{
+					display: none;
+					content:"";
+					height: 1px;
 					position: absolute;
 					bottom: 0;
 					right: 0;
-					max-height: 100%;
-				}
-
-				& > b{
+					left: 0;
 					background-color: var(--color-yellow);
-					font-size: 4rem;
-					line-height: 1;
-					font-weight: 700;
-					padding: .5rem 1rem;
-
-					position: absolute;
-					left: -20px;
-					bottom: 20px;
-					z-index: 10;
-					border: .5rem solid var(--color-light);
 				}
+
+				&:last-child{
+					&:after{
+						display: none;
+					}
+				}
+
+				&__img{
+					height: 240px;
+					position: relative;
+					margin-bottom: var(--space);
+
+					svg{
+						position: absolute;
+						bottom: 0;
+						right: 0;
+						max-height: 100%;
+					}
+
+					& > b{
+						background-color: var(--color-yellow);
+						font-size: 4rem;
+						line-height: 1;
+						font-weight: 700;
+						padding: .5rem 1rem;
+
+						position: absolute;
+						left: -20px;
+						bottom: 20px;
+						z-index: 10;
+						border: .5rem solid var(--color-light);
+					}
+				}
+			}
+		}
+
+		
+
+		
+
+		&__product{
+			position: absolute;
+			z-index: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+
+			&__gray, &__color{
+				overflow: hidden;
+				white-space: nowrap;
+				display: inline-block;
+				width: 50%;
+
+				.item{
+					display: inline-block;
+					margin-right: 4rem;
+					left: -100px;
+				}
+			}
+
+			&.view-in{
+				.item { animation: 3s ease 1s moveProd1 5, 1s linear 15s fadeOut, 2s linear 16s fadeIn; }
+			}
+
+			@media screen and (max-width: 1000px){
+				display: none;
 			}
 		}
 	}
@@ -364,20 +400,17 @@
 
 	@media screen and (max-width: 728px){
 		.stampTech{
-			display: block;
 
-			&__option{
+			&__options{
 				display: block;
 
-				&:after{ display: none; }
-				&:before { display: block; }
+				&__item{
+					display: block;
+					width: 100%;
 
-				// &__img{
-				// 	// svg{
-				// 	// 	right: auto;
-				// 	// 	left: 7rem;
-				// 	// }
-				// }
+					&:after{ display: none; }
+					&:before { display: block; }
+				}
 			}
 		}
 	}
@@ -402,7 +435,7 @@ query {
 
 <script>
 
-import ShrimpPack from '@/assets/images/shrimp-pack.svg'
+// import ShrimpPack from '@/assets/images/shrimp-pack.svg'
 import ShrimpPack2 from '@/assets/images/shrimp-pack-2.svg'
 import ShrimpPack3 from '@/assets/images/shrimp-pack-3.svg'
 import ShrimpIce from '@/assets/images/shrimp-ice.svg'
@@ -415,7 +448,7 @@ import StampTech2 from '@/assets/images/stampTech-2.svg'
 export default {
 
 	components: {
-      ShrimpPack,
+      // ShrimpPack,
       ShrimpPack2,
       ShrimpPack3,
       ShrimpIce,
