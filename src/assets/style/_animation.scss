@@ -212,14 +212,8 @@
   }
 }
 
-@keyframes moveProd1 {
-  0% {
-    transform: translateX(-100px);
-  }
-  50% {
-    transform: translateX(100px);
-  }
+@keyframes moveProd {
   100% {
-    transform: translateX(200px);
+    transform: translateX(1000px); 
   }
 }

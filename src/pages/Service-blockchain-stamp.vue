@@ -8,7 +8,7 @@
 
 		<div class="shrimps" v-view.once>
 
-			<g-image class="shrimps__pack" alt="" src="~/assets/images/shrimp-pack.svg"/>
+			<g-image class="shrimps__pack" alt="" src="@/assets/images/shrimp-pack.png" width="212" quality="100"/>
 
 			<div class="shrimps__ice shrimps__ice_1"><ShrimpIce/></div>
 			<div class="shrimps__ice shrimps__ice_2"><ShrimpIce/></div>
@@ -80,27 +80,78 @@
 				<div class="stampTech__product" v-view.once>
 					<div class="stampTech__product__gray">
 
-						<g-image class="item" alt="" src="@/assets/images/product_1_g.svg"/>
-						<g-image class="item" alt="" src="@/assets/images/product_1_g.svg"/>
-						<g-image class="item" alt="" src="@/assets/images/product_1_g.svg"/>
-						<g-image class="item" alt="" src="@/assets/images/product_1_g.svg"/>
+						<template v-if="productNumber==1">
+							<ProductG1 class="item"/>
+						</template>
+
+						<template v-if="productNumber==2">
+							<ProductG2 class="item"/>
+						</template>
+
+						<template v-if="productNumber==3">
+							<ProductG3 class="item"/>
+						</template>
+
+						<template v-if="productNumber==4">
+							<ProductG4 class="item"/>
+						</template>
 
 
 					</div>
 					<div class="stampTech__product__color">
-						<g-image class="item" alt="" src="@/assets/images/product_1_c.svg"/>
-						<g-image class="item" alt="" src="@/assets/images/product_1_c.svg"/>
-						<g-image class="item" alt="" src="@/assets/images/product_1_c.svg"/>
-						<g-image class="item" alt="" src="@/assets/images/product_1_c.svg"/>
+						<template v-if="productNumber==1">
+							<ProductC1 class="item"/>
+						</template>
+
+						<template v-if="productNumber==2">
+							<ProductC2 class="item"/>
+						</template>
+
+						<template v-if="productNumber==3">
+							<ProductC3 class="item"/>
+						</template>
+
+						<template v-if="productNumber==4">
+							<ProductC4 class="item"/>
+						</template>
+
+						
 					</div>
 				</div>
 			</div>
 			
 		</section>
 
-		<div class="w-text t-align-center">
+		<div class="w-base t-align-center">
 	        <h2>Схема сотрудничества</h2>
-	        <g-link :to="'mailto:'+$static.metadata.email" target="_blank" class="btn-red">Оставить заявку</g-link>
+	        <div class="grid grid-c3 collaborate">
+	        	<div class="collaborate__item">
+	        		<div class="inside">
+	        			<div class="collaborate__item__img">
+	        				<g-image alt="Схема сотрудничества, шаг 1" src="@/assets/images/collaborate-i-1.png"/>
+	        			</div>
+	        			<strong>Пришлите пример данных для создания блокчейн штампа</strong>
+	        		</div>
+	        	</div>
+	        	<div class="collaborate__item">
+	        		<div class="inside">
+	        			<div class="collaborate__item__img">
+	        				<g-image alt="Схема сотрудничества, шаг 2" src="@/assets/images/collaborate-i-2.png"/>
+	        			</div>
+	        			<strong>Заключите договор с АНО ИЦР Аиралаб Рус</strong>
+	        		</div>
+	        	</div>
+	        	<div class="collaborate__item">
+	        		<div class="inside">
+	        			<div class="collaborate__item__img">
+	        				<g-image alt="Схема сотрудничества, шаг 3" src="@/assets/images/collaborate-i-3.png"/>
+	        			</div>
+	        			<strong>В течение недели вы выпустите свой первый сертификат</strong>
+	        		</div>
+	        	</div>
+	        </div>
+
+	        <g-link :to="$static.metadata.formBlockchainStamp" target="_blank" class="btn-red">Оставить заявку</g-link>
       	</div>
 
 	</div>
@@ -111,6 +162,29 @@
 
 
 <style lang="scss">
+	.collaborate{
+
+		&__item{
+			.inside{
+				padding-left: var(--space);
+				padding-right: var(--space);
+				padding-top: calc(var(--space)*2);
+				padding-bottom: calc(var(--space)*2);
+			}
+
+			&__img{
+				img{
+					display: inline-block;
+					max-width: 100%;
+
+					@media screen and (max-width: 720px){
+						max-width: 50%;
+					}
+				}
+			}
+		}
+	}
+
 	$start_ice: 1.5s;
 	$speed_ice: 0.4s;
 	$speed_shrimp: 0.6s;
@@ -383,12 +457,26 @@
 				.item{
 					display: inline-block;
 					margin-right: 4rem;
-					left: -100px;
+					transform: translate3d(0, 0, 0);
+					left: -1000px;
+					opacity: 0;
 				}
 			}
 
+			$duration_product: 5s;
+			$delay_product: 1s;
+
 			&.view-in{
-				.item { animation: 3s ease 1s moveProd1 5, 1s linear 15s fadeOut, 2s linear 16s fadeIn; }
+				.stampTech__product__gray{
+					.item{
+						animation: moveProd $duration_product ease $delay_product infinite backwards, fadeIn 0.2s linear $delay_product forwards;
+					}
+				}
+				.stampTech__product__color{
+					.item{
+						animation: moveProd $duration_product ease $duration_product/2 infinite backwards, fadeIn 0.2s linear $duration_product/2 forwards;
+					}
+				}
 			}
 
 			@media screen and (max-width: 1000px){
@@ -428,14 +516,14 @@
 <static-query>
 query {
   metadata {
-    email
+    email,
+    formBlockchainStamp
   }
 }
 </static-query>
 
 <script>
 
-// import ShrimpPack from '@/assets/images/shrimp-pack.svg'
 import ShrimpPack2 from '@/assets/images/shrimp-pack-2.svg'
 import ShrimpPack3 from '@/assets/images/shrimp-pack-3.svg'
 import ShrimpIce from '@/assets/images/shrimp-ice.svg'
@@ -445,21 +533,44 @@ import ShrimpQR from '@/assets/images/shrimp-qr.svg'
 import StampTech1 from '@/assets/images/stampTech-1.svg'
 import StampTech2 from '@/assets/images/stampTech-2.svg'
 
+import ProductG1 from '@/assets/images/product_1_g.svg'
+import ProductG2 from '@/assets/images/product_2_g.svg'
+import ProductG3 from '@/assets/images/product_3_g.svg'
+import ProductG4 from '@/assets/images/product_4_g.svg'
+
+import ProductC1 from '@/assets/images/product_1_c.svg'
+import ProductC2 from '@/assets/images/product_2_c.svg'
+import ProductC3 from '@/assets/images/product_3_c.svg'
+import ProductC4 from '@/assets/images/product_4_c.svg'
+
+
 export default {
 
 	components: {
-      // ShrimpPack,
       ShrimpPack2,
       ShrimpPack3,
       ShrimpIce,
       Shrimp,
       ShrimpQR,
       StampTech1,
-      StampTech2
+      StampTech2,
+      ProductG1,
+      ProductG2,
+      ProductG3,
+      ProductG4,
+      ProductC1,
+      ProductC2,
+      ProductC3,
+      ProductC4
     },
 
   	metaInfo: {
     	title: 'Сервис “Публичный блокчейн штамп” для данных на вашем производстве'
+  	},
+  	computed: {
+	    productNumber : function(){
+	      return Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+	    }
   	}
 }
 </script>
