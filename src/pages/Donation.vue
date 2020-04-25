@@ -2,15 +2,17 @@
   <Layout>
     <div class="page-inside donation">
 		<div class="w-text">
-		    <h1>Поддержка наших проектов</h1>
+		    <div class="texthighlight_yellow t-align-center">
+		    	<h1>Поддержка наших проектов</h1>
+		    </div>
 	  	</div>
 
 	  	<!-- <g-image class="donation__banner" alt="" src="~/assets/images/banner-website-donation.jpg"/> -->
 
-	  	<div class="w-text">
+	  	<div class="w-text section_half">
 	  		<p class="t-paragraph-hyphened">При работе над проектами мы используем большое количество времени высококвалифицированных инженеров, деньги на сопутствующее оборудование, интернет и кофе. Если вам нравится <g-link :to="$static.metadata.bloglink" target="_blank">наша деятельность</g-link>, станьте нашим другом и внесите свой вклад в развитие Умных городов и Индустрии 4.0 в России.</p>
 		
-			<div class="sec-bordered t-align-center">
+			<div class="section-bordered t-align-center">
 	          <p><b>Разовая поддержка любой суммой от 100 руб.</b></p>
 	          <form name="TinkoffPayForm" onsubmit="pay(this); return false;">
 				  <input class="tinkoffPayRow" type="hidden" name="terminalkey" value="1538042640922">
