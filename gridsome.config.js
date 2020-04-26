@@ -15,7 +15,7 @@ module.exports = {
 
     svgRule
       .use('vue-svg-loader')
-      .loader('vue-svg-loader')
+      .loader('vue-svg-loader');
      //  .options({
      //    svgo: {
      //      plugins: [
@@ -23,6 +23,15 @@ module.exports = {
      //      ],
      //    },
    		// });
-  }
+  },
+
+  plugins: [
+    {
+      use: 'gridsome-plugin-yandex-metrika',
+      options: {
+        id: 49460833
+      }
+    }
+  ]
 
 }

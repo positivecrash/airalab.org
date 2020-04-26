@@ -12,9 +12,9 @@ module.exports = function (api) {
 
   api.loadSource(async store => {
     store.addMetadata('bloglink', 'https://zen.yandex.ru/id/5b2f619a3acfb800a8af799a')
-    store.addMetadata('subscribelink', 'https://zen.yandex.ru/id/5b2f619a3acfb800a8af799a')
+    store.addMetadata('subscribelink', 'https://forms.gle/cG9HMKL1a3yhEAPK6')
     store.addMetadata('email', 'ping@airalab.org')
-    store.addMetadata('formBlockchainStamp', 'https://zen.yandex.ru/id/5b2f619a3acfb800a8af799a')
+    store.addMetadata('formBlockchainStamp', 'https://forms.gle/T9b9AypLMY4Ti2Av8')
   })
 
   api.createPages(({ createPage }) => {
