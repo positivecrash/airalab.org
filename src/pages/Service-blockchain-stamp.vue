@@ -190,7 +190,6 @@
 
 	</div>
 
-
   </Layout>
 </template>
 
