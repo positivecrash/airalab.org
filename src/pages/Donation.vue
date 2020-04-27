@@ -98,7 +98,7 @@ export default {
   metaInfo: {
     title: 'Поддержка наших проектов',
     link: [
-      { src: 'https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.j' },
+      { src: 'https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js' },
     ]
   },
 
