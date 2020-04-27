@@ -96,13 +96,18 @@ query {
 <script>
 export default {
   metaInfo: {
-    title: 'Поддержка наших проектов',
-    link: [
-      { src: 'https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js' },
-    ]
+    title: 'Поддержка наших проектов'
+    // link: [
+    //   { src: 'https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js' },
+    // ]
   },
 
   mounted: function(){
+  	let payScript = document.createElement('script')
+  	payScript.setAttribute('src', 'https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js')
+  	document.head.appendChild(payScript)
+
+
   	document.getElementById("sum-submit").disabled = true;
       
       function number_format( number ) {
