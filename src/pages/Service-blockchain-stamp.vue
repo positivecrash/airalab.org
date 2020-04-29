@@ -6,7 +6,7 @@
 	        <div class="texthighlight_yellow t-align-center"><h1>Сервис “Публичный блокчейн штамп” для данных на вашем производстве</h1></div>
        	</div>
 
-		<div class="shrimps" v-view.once>
+		<div class="shrimps" v-view>
 
 			<g-image class="shrimps__pack" alt="" src="@/assets/images/shrimp-pack.png" quality="100"/>
 
@@ -79,7 +79,7 @@
 					</div>
 				</div>
 
-				<div class="stampTech__product" v-view.once>
+				<div class="stampTech__product" v-view>
 					<div class="stampTech__product__gray">
 
 						<template v-if="productNumber==1">
