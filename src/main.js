@@ -1,6 +1,7 @@
 // Import main css
 import '~/assets/style/index.scss'
-import checkView from 'vue-check-view'
+// import checkView from 'vue-check-view'
+import inViewportDirective from 'vue-in-viewport-directive'
 
 
 // This is the main.js file. Import global CSS and scripts here.
@@ -12,5 +13,6 @@ export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 
-  Vue.use(checkView)
+  // Vue.use(checkView)
+  Vue.directive('in-viewport', inViewportDirective)
 }

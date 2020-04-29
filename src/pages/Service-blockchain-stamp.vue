@@ -6,7 +6,7 @@
 	        <div class="texthighlight_yellow t-align-center"><h1>Сервис “Публичный блокчейн штамп” для данных на вашем производстве</h1></div>
        	</div>
 
-		<div class="shrimps" v-view>
+		<div class="shrimps" v-in-viewport>
 
 			<g-image class="shrimps__pack" alt="" src="@/assets/images/shrimp-pack.png" quality="100"/>
 
@@ -79,7 +79,7 @@
 					</div>
 				</div>
 
-				<div class="stampTech__product" v-view>
+				<div class="stampTech__product" v-in-viewport>
 					<div class="stampTech__product__gray">
 
 						<template v-if="productNumber==1">
@@ -357,7 +357,7 @@
 			}
 		}
 
-		&.view-in{
+		&.in-viewport{
 			.shrimps__pack{ animation: 1s cubic-bezier(.02,.52,.69,-0.3) 0.6s scaleIn forwards; }
 			.shrimps__ice_1{ animation: $speed_ice ease-in $start_ice fadeIn forwards; }
 			.shrimps__ice_2{ animation: $speed_ice ease-in $start_ice+$speed_ice/2 fadeIn forwards; }
@@ -520,7 +520,7 @@
 			$duration_product: 5s;
 			$delay_product: 1s;
 
-			&.view-in{
+			&.in-viewport{
 				.stampTech__product__gray{
 					.item{
 						animation: moveProd $duration_product ease $delay_product infinite backwards, fadeIn 0.2s linear $delay_product forwards;

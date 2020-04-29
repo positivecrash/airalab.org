@@ -9,7 +9,8 @@
   "dependencies": {
     "gridsome": "^0.7.0",
     "gridsome-plugin-yandex-metrika": "^0.1.2",
-    "vue-check-view": "^0.3.0"
+    "vue-check-view": "^0.3.0",
+    "vue-in-viewport-directive": "^2.0.0"
   },
   "devDependencies": {
     "node-sass": "^4.14.0",

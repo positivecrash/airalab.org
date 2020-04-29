@@ -20,7 +20,7 @@
               <li><g-link :to="$static.metadata.bloglink" target="_blank">Блог</g-link></li>
               <li><g-link to="/contacts/">Контакты</g-link></li>
               <li><g-link to="/donation/">Поддержать команду</g-link></li>
-              <li><g-link to="/service-blockchain-stamp/">Заказать услугу</g-link></li>
+              <li><g-link to="/service-blockchain-stamp/">Сервисы</g-link></li>
             </ul>
 
           </div>
