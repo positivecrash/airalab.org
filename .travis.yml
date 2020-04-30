@@ -19,7 +19,3 @@ deploy:
     edge: true
     on:
         branch: master
-
-addons:
-  hosts:
-  - airalab.org
