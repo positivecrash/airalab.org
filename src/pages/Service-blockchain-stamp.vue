@@ -6,47 +6,46 @@
 	        <div class="texthighlight_yellow t-align-center"><h1>Сервис “Публичный блокчейн штамп” для данных на вашем производстве</h1></div>
        	</div>
 
-		<!-- <div class="shrimps" v-in-viewport> -->
-		<div class="shrimps">
+		<div class="shrimps" v-in-viewport>
 
-			<g-image class="shrimps__pack" alt="" src="@/assets/images/shrimp-pack.png" quality="100"/>
+			<g-image class="shrimps__pack" alt="" src="@/assets/images/shrimp-pack.png"/>
 
-			<div class="shrimps__ice shrimps__ice_1"><g-image alt="" src="@/assets/images/shrimp-ice.png" quality="100"/></div>
-			<div class="shrimps__ice shrimps__ice_2"><g-image alt="" src="@/assets/images/shrimp-ice.png" quality="100"/></div>
-			<div class="shrimps__ice shrimps__ice_3"><g-image alt="" src="@/assets/images/shrimp-ice.png"  quality="100"/></div>
-			<div class="shrimps__ice shrimps__ice_4"><g-image alt="" src="@/assets/images/shrimp-ice.png"  quality="100"/></div>
-			<div class="shrimps__ice shrimps__ice_5"><g-image alt="" src="@/assets/images/shrimp-ice.png" quality="100"/></div>
-			<div class="shrimps__ice shrimps__ice_6"><g-image alt="" src="@/assets/images/shrimp-ice.png" quality="100"/></div>
-			<div class="shrimps__ice shrimps__ice_7"><g-image alt="" src="@/assets/images/shrimp-ice.png" quality="100"/></div>
-			<div class="shrimps__ice shrimps__ice_8"><g-image alt="" src="@/assets/images/shrimp-ice.png" quality="100"/></div>
+			<div class="shrimps__ice shrimps__ice_1"><g-image alt="" src="@/assets/images/shrimp-ice.png"/></div>
+			<div class="shrimps__ice shrimps__ice_2"><g-image alt="" src="@/assets/images/shrimp-ice.png"/></div>
+			<div class="shrimps__ice shrimps__ice_3"><g-image alt="" src="@/assets/images/shrimp-ice.png"/></div>
+			<div class="shrimps__ice shrimps__ice_4"><g-image alt="" src="@/assets/images/shrimp-ice.png"/></div>
+			<div class="shrimps__ice shrimps__ice_5"><g-image alt="" src="@/assets/images/shrimp-ice.png"/></div>
+			<div class="shrimps__ice shrimps__ice_6"><g-image alt="" src="@/assets/images/shrimp-ice.png"/></div>
+			<div class="shrimps__ice shrimps__ice_7"><g-image alt="" src="@/assets/images/shrimp-ice.png"/></div>
+			<div class="shrimps__ice shrimps__ice_8"><g-image alt="" src="@/assets/images/shrimp-ice.png"/></div>
 
 
 			<div class="shrimps__right">
-				<div class="shrimps__right__item shrimps__right__item_1"><g-image alt="" src="@/assets/images/shrimp.png" quality="100"/></div>
-				<div class="shrimps__right__item shrimps__right__item_2"><g-image alt="" src="@/assets/images/shrimp.png" quality="100"/></div>
-				<div class="shrimps__right__item shrimps__right__item_3"><g-image alt="" src="@/assets/images/shrimp.png" quality="100"/></div>
-				<div class="shrimps__right__item shrimps__right__item_4"><g-image alt="" src="@/assets/images/shrimp.png" quality="100"/></div>
-				<div class="shrimps__right__item shrimps__right__item_5"><g-image alt="" src="@/assets/images/shrimp.png" quality="100"/></div>
+				<div class="shrimps__right__item shrimps__right__item_1"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
+				<div class="shrimps__right__item shrimps__right__item_2"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
+				<div class="shrimps__right__item shrimps__right__item_3"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
+				<div class="shrimps__right__item shrimps__right__item_4"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
+				<div class="shrimps__right__item shrimps__right__item_5"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
 			</div>
 
 			<div class="shrimps__left">
-				<div class="shrimps__left__item shrimps__left__item_1"><g-image alt="" src="@/assets/images/shrimp.png" quality="100"/></div>
-				<div class="shrimps__left__item shrimps__left__item_2"><g-image alt="" src="@/assets/images/shrimp.png" quality="100"/></div>
-				<div class="shrimps__left__item shrimps__left__item_3"><g-image alt="" src="@/assets/images/shrimp.png" quality="100"/></div>
-				<div class="shrimps__left__item shrimps__left__item_4"><g-image alt="" src="@/assets/images/shrimp.png" quality="100"/></div>
-				<div class="shrimps__left__item shrimps__left__item_5"><g-image alt="" src="@/assets/images/shrimp.png" quality="100"/></div>
+				<div class="shrimps__left__item shrimps__left__item_1"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
+				<div class="shrimps__left__item shrimps__left__item_2"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
+				<div class="shrimps__left__item shrimps__left__item_3"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
+				<div class="shrimps__left__item shrimps__left__item_4"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
+				<div class="shrimps__left__item shrimps__left__item_5"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
 			</div>
 
-			<div class="shrimps__qr"><g-image alt="" src="@/assets/images/shrimp-qr.png" quality="100"/></div>
+			<div class="shrimps__qr"><g-image alt="" src="@/assets/images/shrimp-qr.png"/></div>
 
 
-			<div class="shrimps__pack_2"><g-image alt="" src="@/assets/images/shrimp-pack-2.png" quality="100"/></div>
-			<div class="shrimps__pack_3"><g-image alt="" src="@/assets/images/shrimp-pack-3.png" quality="100"/></div>
-			<div class="shrimps__pack_4"><g-image alt="" src="@/assets/images/shrimp-pack-2.png" quality="100"/></div>
+			<div class="shrimps__pack_2"><g-image alt="" src="@/assets/images/shrimp-pack-2.png"/></div>
+			<div class="shrimps__pack_3"><g-image alt="" src="@/assets/images/shrimp-pack-3.png"/></div>
+			<div class="shrimps__pack_4"><g-image alt="" src="@/assets/images/shrimp-pack-2.png"/></div>
 
-			<div class="shrimps__pack_5"><g-image alt="" src="@/assets/images/shrimp-pack-3.png" quality="100"/></div>
-			<div class="shrimps__pack_6"><g-image alt="" src="@/assets/images/shrimp-pack-2.png" quality="100"/></div>
-			<div class="shrimps__pack_7"><g-image alt="" src="@/assets/images/shrimp-pack-3.png" quality="100"/></div>
+			<div class="shrimps__pack_5"><g-image alt="" src="@/assets/images/shrimp-pack-3.png"/></div>
+			<div class="shrimps__pack_6"><g-image alt="" src="@/assets/images/shrimp-pack-2.png"/></div>
+			<div class="shrimps__pack_7"><g-image alt="" src="@/assets/images/shrimp-pack-3.png"/></div>
 
 		</div>
 		
@@ -67,21 +66,20 @@
 					<div class="stampTech__options__item">
 						<div class="stampTech__options__item__img">
 							<b>1</b>
-							<g-image alt="" src="@/assets/images/stampTech-1.png" quality="100"/>
+							<g-image alt="" src="@/assets/images/stampTech-1.png"/>
 						</div>
 						<p><strong>Выпуск сертификата оператором вручную в заранее подготовленном децентрализованном приложении</strong></p>
 					</div>
 					<div class="stampTech__options__item">
 						<div class="stampTech__options__item__img">
 							<b>2</b>
-							<g-image alt="" src="@/assets/images/stampTech-2.png" quality="100"/>
+							<g-image alt="" src="@/assets/images/stampTech-2.png"/>
 						</div>
 						<p><strong>Выпуск сертификата в фоновом режиме автоматически, на основе данных, получаемых от настроенных IoT устройств</strong></p>
 					</div>
 				</div>
 
-				<!-- <div class="stampTech__product" v-in-viewport> -->
-				<div class="stampTech__product">
+				<div class="stampTech__product" v-in-viewport>
 					<div class="stampTech__product__gray">
 
 						<template v-if="productNumber==1">
@@ -359,7 +357,7 @@
 			}
 		}
 
-		// &.in-viewport{
+		&.in-viewport{
 			.shrimps__pack{ animation: 1s cubic-bezier(.02,.52,.69,-0.3) 0.6s scaleIn forwards; }
 			.shrimps__ice_1{ animation: $speed_ice ease-in $start_ice fadeIn forwards; }
 			.shrimps__ice_2{ animation: $speed_ice ease-in $start_ice+$speed_ice/2 fadeIn forwards; }
@@ -408,7 +406,7 @@
 			.shrimps__pack_7 {
 				animation: $speed_qr ease-in $start_ice+($speed_ice/2)*17 fadeIn forwards, $speed_qr $func_packs $start_ice+($speed_ice/2)*17 pack7 forwards;
 			}
-		// }
+		}
 	}
 
 
@@ -420,6 +418,7 @@
 		&__options{
 			box-sizing: border-box;
 			display: table;
+			// width: 100%;
 			table-layout: fixed;
 
 			margin-top: var(--space);
@@ -463,10 +462,14 @@
 				}
 
 				&__img{
+					// height: 240px;
 					position: relative;
 					margin-bottom: var(--space);
 
 					img{
+						// position: absolute;
+						// bottom: 0;
+						// right: 0;
 						max-width: 100%;
 					}
 
@@ -517,7 +520,7 @@
 			$duration_product: 5s;
 			$delay_product: 1s;
 
-			// &.in-viewport{
+			&.in-viewport{
 				.stampTech__product__gray{
 					.item{
 						animation: moveProd $duration_product ease $delay_product infinite backwards, fadeIn 0.2s linear $delay_product forwards;
@@ -528,7 +531,7 @@
 						animation: moveProd $duration_product ease $duration_product/2 infinite backwards, fadeIn 0.2s linear $duration_product/2 forwards;
 					}
 				}
-			// }
+			}
 
 			@media screen and (max-width: 1000px){
 				display: none;
@@ -562,9 +565,7 @@ query {
 
 <script>
 
-// import { enable, disable } from 'vue-in-viewport-directive'
-// disable()
-// setTimeout(enable, 500)
+import { enable, disable } from 'vue-in-viewport-directive'
 
 export default {
 
@@ -578,6 +579,10 @@ export default {
 	    productNumber : function(){
 	      return Math.floor(Math.random() * (5 - 1 + 1)) + 1;
 	    }
+  	},
+  	mounted: function(){
+  		disable()
+		setTimeout(enable, 500)
   	}
 }
 </script>
