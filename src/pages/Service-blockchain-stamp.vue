@@ -565,6 +565,10 @@ query {
 
 <script>
 
+import { enable, disable } from 'vue-in-viewport-directive'
+disable()
+setTimeout(enable, 500)
+
 export default {
 
 	components: {
