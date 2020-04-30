@@ -9,44 +9,44 @@
 		<!-- <div class="shrimps" v-in-viewport.once> -->
 		<div class="shrimps">
 
-			<g-image class="shrimps__pack" alt="" src="@/assets/images/shrimp-pack.png"/>
+			<g-image class="shrimps__pack" alt="" src="@/assets/images/shrimp-pack.png" immediate='true'/>
 
-			<div class="shrimps__ice shrimps__ice_1"><g-image alt="" src="@/assets/images/shrimp-ice.png"/></div>
-			<div class="shrimps__ice shrimps__ice_2"><g-image alt="" src="@/assets/images/shrimp-ice.png"/></div>
-			<div class="shrimps__ice shrimps__ice_3"><g-image alt="" src="@/assets/images/shrimp-ice.png"/></div>
-			<div class="shrimps__ice shrimps__ice_4"><g-image alt="" src="@/assets/images/shrimp-ice.png"/></div>
-			<div class="shrimps__ice shrimps__ice_5"><g-image alt="" src="@/assets/images/shrimp-ice.png"/></div>
-			<div class="shrimps__ice shrimps__ice_6"><g-image alt="" src="@/assets/images/shrimp-ice.png"/></div>
-			<div class="shrimps__ice shrimps__ice_7"><g-image alt="" src="@/assets/images/shrimp-ice.png"/></div>
-			<div class="shrimps__ice shrimps__ice_8"><g-image alt="" src="@/assets/images/shrimp-ice.png"/></div>
+			<div class="shrimps__ice shrimps__ice_1"><g-image alt="" src="@/assets/images/shrimp-ice.png" immediate='true'/></div>
+			<div class="shrimps__ice shrimps__ice_2"><g-image alt="" src="@/assets/images/shrimp-ice.png" immediate='true'/></div>
+			<div class="shrimps__ice shrimps__ice_3"><g-image alt="" src="@/assets/images/shrimp-ice.png" immediate='true'/></div>
+			<div class="shrimps__ice shrimps__ice_4"><g-image alt="" src="@/assets/images/shrimp-ice.png" immediate='true'/></div>
+			<div class="shrimps__ice shrimps__ice_5"><g-image alt="" src="@/assets/images/shrimp-ice.png" immediate='true'/></div>
+			<div class="shrimps__ice shrimps__ice_6"><g-image alt="" src="@/assets/images/shrimp-ice.png" immediate='true'/></div>
+			<div class="shrimps__ice shrimps__ice_7"><g-image alt="" src="@/assets/images/shrimp-ice.png" immediate='true'/></div>
+			<div class="shrimps__ice shrimps__ice_8"><g-image alt="" src="@/assets/images/shrimp-ice.png" immediate='true'/></div>
 
 
 			<div class="shrimps__right">
-				<div class="shrimps__right__item shrimps__right__item_1"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
-				<div class="shrimps__right__item shrimps__right__item_2"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
-				<div class="shrimps__right__item shrimps__right__item_3"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
-				<div class="shrimps__right__item shrimps__right__item_4"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
-				<div class="shrimps__right__item shrimps__right__item_5"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
+				<div class="shrimps__right__item shrimps__right__item_1"><g-image alt="" src="@/assets/images/shrimp.png" immediate='true'/></div>
+				<div class="shrimps__right__item shrimps__right__item_2"><g-image alt="" src="@/assets/images/shrimp.png" immediate='true'/></div>
+				<div class="shrimps__right__item shrimps__right__item_3"><g-image alt="" src="@/assets/images/shrimp.png" immediate='true'/></div>
+				<div class="shrimps__right__item shrimps__right__item_4"><g-image alt="" src="@/assets/images/shrimp.png" immediate='true'/></div>
+				<div class="shrimps__right__item shrimps__right__item_5"><g-image alt="" src="@/assets/images/shrimp.png" immediate='true'/></div>
 			</div>
 
 			<div class="shrimps__left">
-				<div class="shrimps__left__item shrimps__left__item_1"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
-				<div class="shrimps__left__item shrimps__left__item_2"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
-				<div class="shrimps__left__item shrimps__left__item_3"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
-				<div class="shrimps__left__item shrimps__left__item_4"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
-				<div class="shrimps__left__item shrimps__left__item_5"><g-image alt="" src="@/assets/images/shrimp.png"/></div>
+				<div class="shrimps__left__item shrimps__left__item_1"><g-image alt="" src="@/assets/images/shrimp.png" immediate='true'/></div>
+				<div class="shrimps__left__item shrimps__left__item_2"><g-image alt="" src="@/assets/images/shrimp.png" immediate='true'/></div>
+				<div class="shrimps__left__item shrimps__left__item_3"><g-image alt="" src="@/assets/images/shrimp.png" immediate='true'/></div>
+				<div class="shrimps__left__item shrimps__left__item_4"><g-image alt="" src="@/assets/images/shrimp.png" immediate='true'/></div>
+				<div class="shrimps__left__item shrimps__left__item_5"><g-image alt="" src="@/assets/images/shrimp.png" immediate='true'/></div>
 			</div>
 
-			<div class="shrimps__qr"><g-image alt="" src="@/assets/images/shrimp-qr.png"/></div>
+			<div class="shrimps__qr"><g-image alt="" src="@/assets/images/shrimp-qr.png" immediate='true'/></div>
 
 
-			<div class="shrimps__pack_2"><g-image alt="" src="@/assets/images/shrimp-pack-2.png"/></div>
-			<div class="shrimps__pack_3"><g-image alt="" src="@/assets/images/shrimp-pack-3.png"/></div>
-			<div class="shrimps__pack_4"><g-image alt="" src="@/assets/images/shrimp-pack-2.png"/></div>
+			<div class="shrimps__pack_2"><g-image alt="" src="@/assets/images/shrimp-pack-2.png" immediate='true'/></div>
+			<div class="shrimps__pack_3"><g-image alt="" src="@/assets/images/shrimp-pack-3.png" immediate='true'/></div>
+			<div class="shrimps__pack_4"><g-image alt="" src="@/assets/images/shrimp-pack-2.png" immediate='true'/></div>
 
-			<div class="shrimps__pack_5"><g-image alt="" src="@/assets/images/shrimp-pack-3.png"/></div>
-			<div class="shrimps__pack_6"><g-image alt="" src="@/assets/images/shrimp-pack-2.png"/></div>
-			<div class="shrimps__pack_7"><g-image alt="" src="@/assets/images/shrimp-pack-3.png"/></div>
+			<div class="shrimps__pack_5"><g-image alt="" src="@/assets/images/shrimp-pack-3.png" immediate='true'/></div>
+			<div class="shrimps__pack_6"><g-image alt="" src="@/assets/images/shrimp-pack-2.png" immediate='true'/></div>
+			<div class="shrimps__pack_7"><g-image alt="" src="@/assets/images/shrimp-pack-3.png" immediate='true'/></div>
 
 		</div>
 		
