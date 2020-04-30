@@ -20,3 +20,6 @@ deploy:
     on:
         branch: master
 
+addons:
+  hosts:
+  - airalab.org
