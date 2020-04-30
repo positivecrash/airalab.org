@@ -17,6 +17,7 @@ deploy:
     keep_history: true
     local_dir: dist
     edge: true
+    url: https://airalab.org
     on:
         branch: master
 
