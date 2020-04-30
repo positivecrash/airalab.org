@@ -581,11 +581,11 @@ export default {
 	    productNumber : function(){
 	      return Math.floor(Math.random() * (5 - 1 + 1)) + 1;
 	    }
-  	},
-  	mounted: function(){
-  // 		disable()
-		// setTimeout(enable, 500)
   	}
+  // 	mounted: function(){
+  // // 		disable()
+		// // setTimeout(enable, 500)
+  // 	}
 }
 </script>
 
