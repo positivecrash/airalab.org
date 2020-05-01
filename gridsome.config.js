@@ -23,15 +23,15 @@ module.exports = {
      //      ],
      //    },
    		// });
-  }
+  },
 
-  // plugins: [
-  //   {
-  //     use: 'gridsome-plugin-yandex-metrika',
-  //     options: {
-  //       id: 49460833
-  //     }
-  //   }
-  // ]
+  plugins: [
+    {
+      use: 'gridsome-plugin-yandex-metrika',
+      options: {
+        id: 49460833
+      }
+    }
+  ]
 
 }

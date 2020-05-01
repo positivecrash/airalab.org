@@ -1,5 +1,6 @@
 <template>
   <Layout>
+  	<ClientOnly>
     <div class="page-inside service">
 
     	<div class="w-text">
@@ -100,7 +101,7 @@
 						<g-image class="item" src="@/assets/images/product_3_c@2x.png" v-if="productNumber === 3"/>
 						<g-image class="item" src="@/assets/images/product_4_c@2x.png" v-if="productNumber === 4"/>
 						<g-image class="item" src="@/assets/images/product_5_c@2x.png" v-if="productNumber === 5"/>
-						
+
 					</div>
 				</div>
 			</div>
@@ -165,6 +166,7 @@
 
 	</div>
 
+	</ClientOnly>
   </Layout>
 </template>
 
