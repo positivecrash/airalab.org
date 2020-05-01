@@ -6,9 +6,9 @@
 	        <div class="texthighlight_yellow t-align-center"><h1>Сервис “Публичный блокчейн штамп” для данных на вашем производстве</h1></div>
        	</div>
 
-		<!-- <div class="shrimps" v-in-viewport.once> -->
-		<div class="shrimps">
-
+		<!-- <div class="shrimps"> -->
+		<div class="shrimps" v-in-viewport.once>
+	
 			<g-image class="shrimps__pack" alt="" src="@/assets/images/shrimp-pack.png" immediate='true'/>
 
 			<div class="shrimps__ice shrimps__ice_1"><g-image alt="" src="@/assets/images/shrimp-ice.png" immediate='true'/></div>
@@ -80,8 +80,9 @@
 					</div>
 				</div>
 
-				<!-- <div class="stampTech__product" v-in-viewport.once> -->
-				<div class="stampTech__product">
+				<!-- <div class="stampTech__product"> -->
+				<div class="stampTech__product" v-in-viewport.once>
+				
 					<div class="stampTech__product__gray">
 
 						<template v-if="productNumber==1">
@@ -359,7 +360,7 @@
 			}
 		}
 
-		// &.in-viewport{
+		&.in-viewport{
 			.shrimps__pack{ animation: 1s cubic-bezier(.02,.52,.69,-0.3) 0.6s scaleIn forwards; }
 			.shrimps__ice_1{ animation: $speed_ice ease-in $start_ice fadeIn forwards; }
 			.shrimps__ice_2{ animation: $speed_ice ease-in $start_ice+$speed_ice/2 fadeIn forwards; }
@@ -408,7 +409,7 @@
 			.shrimps__pack_7 {
 				animation: $speed_qr ease-in $start_ice+($speed_ice/2)*17 fadeIn forwards, $speed_qr $func_packs $start_ice+($speed_ice/2)*17 pack7 forwards;
 			}
-		// }
+		}
 	}
 
 
@@ -522,7 +523,7 @@
 			$duration_product: 5s;
 			$delay_product: 1s;
 
-			// &.in-viewport{
+			&.in-viewport{
 				.stampTech__product__gray{
 					.item{
 						animation: moveProd $duration_product ease $delay_product infinite backwards, fadeIn 0.2s linear $delay_product forwards;
@@ -533,7 +534,7 @@
 						animation: moveProd $duration_product ease $duration_product/2 infinite backwards, fadeIn 0.2s linear $duration_product/2 forwards;
 					}
 				}
-			// }
+			}
 
 			@media screen and (max-width: 1000px){
 				display: none;
@@ -567,7 +568,7 @@ query {
 
 <script>
 
-// import { enable, disable } from 'vue-in-viewport-directive'
+import { enable, disable } from 'vue-in-viewport-directive'
 
 export default {
 
@@ -581,11 +582,11 @@ export default {
 	    productNumber : function(){
 	      return Math.floor(Math.random() * (5 - 1 + 1)) + 1;
 	    }
+  	},
+  	mounted: function(){
+  		disable()
+		setTimeout(enable, 500)
   	}
-  // 	mounted: function(){
-  // // 		disable()
-		// // setTimeout(enable, 500)
-  // 	}
 }
 </script>
 
