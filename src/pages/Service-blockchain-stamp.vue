@@ -79,6 +79,7 @@
 						<p><strong>Выпуск сертификата в фоновом режиме автоматически, на основе данных, получаемых от настроенных IoT устройств</strong></p>
 					</div>
 				</div>
+				
 
 				<!-- <div class="stampTech__product"> -->
 				<div class="stampTech__product" v-in-viewport.once>
