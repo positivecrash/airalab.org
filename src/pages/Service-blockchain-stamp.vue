@@ -39,7 +39,6 @@
 
 			<div class="shrimps__qr"><g-image alt="" src="@/assets/images/shrimp-qr.png" immediate='true'/></div>
 
-
 			<div class="shrimps__pack_2"><g-image alt="" src="@/assets/images/shrimp-pack-2.png" immediate='true'/></div>
 			<div class="shrimps__pack_3"><g-image alt="" src="@/assets/images/shrimp-pack-3.png" immediate='true'/></div>
 			<div class="shrimps__pack_4"><g-image alt="" src="@/assets/images/shrimp-pack-2.png" immediate='true'/></div>
@@ -50,7 +49,7 @@
 
 		</div>
 		
-		
+
 		<div class="w-text t-align-center">
 	        <p>Воспользуйтесь сервисом от АНО ИЦР Аиралаб Рус “Блокчейн штамп” : выпускайте web3 цифровые сертификаты и паспорта продукции и повышайте доверие к произведенной вами продукции или оказанным услугам.</p>
 	        <g-link :to="'mailto:'+$static.metadata.email" target="_blank" class="btn-red">Напишите нам</g-link>
