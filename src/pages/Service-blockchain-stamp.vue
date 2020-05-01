@@ -80,22 +80,22 @@
 					</div>
 				</div>
 
-				
+
 
 				<!-- <div class="stampTech__product"> -->
 				<div class="stampTech__product" v-in-viewport.once>
 				
 					<div class="stampTech__product__gray">
 
-						<template v-if="productNumber==1">
+						<template v-if="productNumber===1">
 							<g-image class="item" src="@/assets/images/product_1_g@2x.png"/>
 						</template>
 
-						<template v-if="productNumber==2">
+						<template v-if="productNumber===2">
 							<g-image class="item" src="@/assets/images/product_2_g@2x.png"/>
 						</template>
 
-						<template v-if="productNumber==3">
+						<template v-if="productNumber===3">
 							<g-image class="item" src="@/assets/images/product_3_g@2x.png"/>
 						</template>
 
@@ -110,23 +110,23 @@
 
 					</div>
 					<div class="stampTech__product__color">
-						<template v-if="productNumber==1">
+						<template v-if="productNumber===1">
 							<g-image class="item" src="@/assets/images/product_1_c@2x.png"/>
 						</template>
 
-						<template v-if="productNumber==2">
+						<template v-if="productNumber===2">
 							<g-image class="item" src="@/assets/images/product_2_c@2x.png"/>
 						</template>
 
-						<template v-if="productNumber==3">
+						<template v-if="productNumber===3">
 							<g-image class="item" src="@/assets/images/product_3_c@2x.png"/>
 						</template>
 
-						<template v-if="productNumber==4">
+						<template v-if="productNumber===4">
 							<g-image class="item" src="@/assets/images/product_4_c@2x.png"/>
 						</template>
 
-						<template v-if="productNumber==5">
+						<template v-if="productNumber===5">
 							<g-image class="item" src="@/assets/images/product_5_c@2x.png"/>
 						</template>
 
