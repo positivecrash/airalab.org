@@ -14,7 +14,7 @@ deploy:
     provider: pages
     token: $GH_TOKEN
     cleanup: false
-    keep_history: true
+    keep_history: false
     local_dir: dist
     edge: true
     on:
