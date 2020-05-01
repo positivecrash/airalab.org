@@ -13,8 +13,8 @@ before_deploy:
 deploy:
     provider: pages
     token: $GH_TOKEN
-    cleanup: false
-    keep_history: false
+    cleanup: true
+    keep_history: true
     local_dir: dist
     edge: true
     on:
