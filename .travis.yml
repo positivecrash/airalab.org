@@ -3,13 +3,11 @@ node_js:
     - 10
 branches: master
 
-script:
-    - echo airalab.org > CNAME
-
 before_deploy:
     - npm install --global @gridsome/cli
     - npm ci
     - gridsome build
+    - echo "airalab.org" > ./CNAME
 
 deploy:
     provider: pages
