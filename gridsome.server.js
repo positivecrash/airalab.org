@@ -15,6 +15,12 @@ module.exports = function (api) {
     store.addMetadata('subscribelink', 'https://forms.gle/cG9HMKL1a3yhEAPK6')
     store.addMetadata('email', 'ping@airalab.org')
     store.addMetadata('formBlockchainStamp', 'https://forms.gle/T9b9AypLMY4Ti2Av8')
+
+    store.addMetadata('siteNameRU', 'АНО ИЦР Аиралаб Рус')
+    store.addMetadata('siteDescriptionRU', 'Мы проводим эксперименты с Умными городами и Индустрией 4.0 в России')
+
+    store.addMetadata('siteNameEN', 'NPO robotics research centre Airalab Rus')
+    store.addMetadata('siteDescriptionEN', 'We are conducting experiments with Smart Cities and Industry 4.0 in Russia.')
   })
 
   api.createPages(({ createPage }) => {

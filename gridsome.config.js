@@ -5,8 +5,13 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
+
   siteName: 'АНО ИЦР Аиралаб Рус',
   siteDescription: 'Мы проводим эксперименты с Умными городами и Индустрией 4.0 в России',
+  siteUrl: 'https://airalab.org',
+
+  titleTemplate: '%s',
+  
 
   chainWebpack: config => {
     const svgRule = config.module.rule('svg');
@@ -16,13 +21,6 @@ module.exports = {
     svgRule
       .use('vue-svg-loader')
       .loader('vue-svg-loader');
-     //  .options({
-     //    svgo: {
-     //      plugins: [
-     //        { removeDimensions: true },
-     //      ],
-     //    },
-   		// });
   },
 
   plugins: [
