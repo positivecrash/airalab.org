@@ -4,8 +4,14 @@
       <div class="w-base">
         <div class="footer-row d-t w-full">
 
-          <div class="d-t_cell align-v-m" v-if=" lang == 'ru' ">
-            <g-link :to="$static.metadata.subscribelink" target="_blank">Рассылка важных новостей</g-link>
+          <div class="d-t_cell align-v-m">
+            <tenplate v-if=" lang == 'ru' ">
+              <g-link :to="$static.metadata.subscribeRU" target="_blank">Рассылка важных новостей</g-link>
+            </tenplate>
+
+            <tenplate v-if=" lang == 'en' ">
+              <g-link :to="$static.metadata.subscribeEN" target="_blank">Newsletter subscribe</g-link>
+            </tenplate>
           </div>
 
           <div class="d-t_cell align-v-m t-align-right">{{string1}} <g-link :to="'mailto:'+$static.metadata.email" v-html="$static.metadata.email"/></div>
@@ -65,8 +71,9 @@
 <static-query>
 query {
   metadata {
-    subscribelink,
-    email
+    email,
+    subscribeRU,
+    subscribeEN
   }
 }
 </static-query>

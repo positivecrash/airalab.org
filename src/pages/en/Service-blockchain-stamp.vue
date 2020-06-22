@@ -21,6 +21,7 @@
       :block2step2 = "'Sign a contract with NPO robotics research centre Airalab Rus'"
       :block2step3 = "'Within a week you will issue your first certificate'"
       :block2button = "'Submit your application'"
+      :block2buttonLink = "this.$static.metadata.formBlockchainStampEN"
 
       :block3title = "'Areas of application'"
       :block3opt1title = "'Asset tracking'"
@@ -40,7 +41,8 @@
 <static-query>
   query {
     metadata {
-      siteNameEN
+      siteNameEN,
+      formBlockchainStampEN
     }
   }
 </static-query>

@@ -21,6 +21,7 @@
       :block2step2 = "'Заключите договор с АНО ИЦР Аиралаб Рус'"
       :block2step3 = "'В течение недели вы выпустите свой первый сертификат'"
       :block2button = "'Оставить заявку'"
+      :block2buttonLink = "this.$static.metadata.formBlockchainStampRU"
 
       :block3title = "'Сферы применения'"
       :block3opt1title = "'Asset tracking'"
@@ -40,7 +41,8 @@
 <static-query>
   query {
     metadata {
-      siteNameRU
+      siteNameRU,
+      formBlockchainStampRU
     }
   }
 </static-query>

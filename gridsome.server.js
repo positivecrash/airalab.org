@@ -11,10 +11,13 @@ module.exports = function (api) {
   // })
 
   api.loadSource(async store => {
-    store.addMetadata('bloglink', 'https://zen.yandex.ru/id/5b2f619a3acfb800a8af799a')
-    store.addMetadata('subscribelink', 'https://forms.gle/cG9HMKL1a3yhEAPK6')
+    store.addMetadata('blogRU', 'https://zen.yandex.ru/id/5b2f619a3acfb800a8af799a')
+    store.addMetadata('blogEN', 'https://zen.yandex.ru/id/5b2f619a3acfb800a8af799a')
     store.addMetadata('email', 'ping@airalab.org')
-    store.addMetadata('formBlockchainStamp', 'https://forms.gle/T9b9AypLMY4Ti2Av8')
+    store.addMetadata('subscribeRU', 'https://forms.gle/cG9HMKL1a3yhEAPK6')
+    store.addMetadata('subscribeEN', 'https://forms.gle/HoBKY7jLaog4ZW36A')
+    store.addMetadata('formBlockchainStampRU', 'https://forms.gle/T9b9AypLMY4Ti2Av8')
+    store.addMetadata('formBlockchainStampEN', 'https://forms.gle/yEmkU5mQguNS3Lh38')
 
     store.addMetadata('siteNameRU', 'АНО ИЦР Аиралаб Рус')
     store.addMetadata('siteDescriptionRU', 'Мы проводим эксперименты с Умными городами и Индустрией 4.0 в России')

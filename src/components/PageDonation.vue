@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+
     <div class="page-inside donation">
     <div class="w-text">
         <div class="texthighlight_yellow t-align-center">
@@ -35,7 +35,7 @@
         </div>
 
   </div>
-  </Layout>
+
 </template>
 
 
@@ -84,15 +84,6 @@
     }
   }
 </style>
-
-
-<static-query>
-query {
-  metadata {
-    bloglink
-  }
-}
-</static-query>
 
 
 <script>

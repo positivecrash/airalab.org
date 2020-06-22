@@ -134,7 +134,7 @@
 	        	</div>
 	        </div>
 
-	        <g-link :to="$static.metadata.formBlockchainStamp" target="_blank" class="btn-red">{{ block2button }}</g-link>
+	        <g-link :to="block2buttonLink" target="_blank" class="btn-red">{{ block2button }}</g-link>
       	</section>
 
       	<section class="section section-gray">
@@ -531,8 +531,7 @@
 <static-query>
 query {
   metadata {
-    email,
-    formBlockchainStamp
+    email
   }
 }
 </static-query>
@@ -558,6 +557,7 @@ export default {
       block2step2: { type: String, default: '' },
       block2step3: { type: String, default: '' },
       block2button: { type: String, default: '' },
+      block2buttonLink: { type: String, default: '' },
 
       block3title: { type: String, default: '' },
       block3opt1title: { type: String, default: '' },
