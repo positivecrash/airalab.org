@@ -2,7 +2,7 @@
   
   <div class="layout">
 
-    <HeaderLang :lang="'en'"/>
+    <ClientOnly><HeaderLang :lang="'en'"/></ClientOnly>
     <slot/>
     <FooterLang :lang="'en'"/>
     

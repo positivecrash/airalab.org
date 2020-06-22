@@ -11,7 +11,7 @@ export default {
 export const geturl = {
 	methods: {
       geturl: function(lang) {
-
+          
           var path = window.location.pathname;
           var iterator = langs.values();
           var curLang;
@@ -31,6 +31,7 @@ export const geturl = {
           }
 
           return '/' + localStorage.lang + path;
+        
         }
     }
 }

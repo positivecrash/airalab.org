@@ -1,5 +1,5 @@
 <template>
-  
+
   <header class="header" role='banner'>
 
     <div class="w-base">
