@@ -30,15 +30,15 @@
                 </template>
             </template>
 
-           <!--  <li v-if="langs">
-              <a href="javascript:;" class="langTog"><span class="langTog__text">{{ langCurrent }}</span> <span class="langTog__arrow">&#8964;</span></a>
+            <li v-if="langs" class="langTog">
+              <a href="javascript:;" class="langTog__cur"><span class="langTog__cur__text">{{ lang }}</span> <span class="langTog__cur__arrow">&#8964;</span></a>
 
-              <ul>
+              <ul class="langTog__menu">
                 <template v-for="(item, key) in langs">
-                  <li v-if="item.lang != langCurrent"><a :href="geturl(item.lang)">{{ item.lang }}</a></li>
+                  <li v-if="item.lang != lang"><a :href="geturl(item.lang)">{{ item.lang }}</a></li>
                 </template>
               </ul>
-            </li> -->
+            </li>
           </ul>
 
 
@@ -93,8 +93,9 @@
 
     li
       {
-        display: inline;
+        display: inline-block;
         margin-left: 40px;
+        margin-bottom: 0;
 
         &:first-child { margin-left: 0;}
 
@@ -158,23 +159,67 @@
 
   .langTog {
 
-    border: 1px solid var(--color-light);
-    padding: 0.2rem 0.4rem;
-    
-    &__text {
-      vertical-align: middle;
-      text-transform: uppercase;
-    }
-
-    &__arrow {
-      vertical-align: top;
-      line-height: 1;
-      margin-left: 0.2rem;
-    }
+    text-transform: uppercase;
+    position: relative;
 
     &:hover {
-      background-color: var(--color-light);
-      color: var(--color-light);
+      .langTog__cur {
+        background-color: var(--color-light);
+        color: var(--color-blue);
+      }
+
+      .langTog__menu{
+        opacity: 1;
+      }
+    }
+
+    &__cur {
+      border: 1px solid var(--color-light);
+      padding: 0.2rem 0.4rem;
+      
+      &__text {
+        vertical-align: middle;
+      }
+
+      &__arrow {
+        vertical-align: top;
+        line-height: 1;
+        margin-left: 0.2rem;
+      }
+    }
+
+    &__menu {
+      transition: 0.2s ease opacity;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      margin-left: 0;
+      text-align: left;
+      opacity: 0;
+
+      &, a { color: var(--color-dark); }
+
+      li {
+        display: block;
+        margin-left: 0;
+        padding-top: 0.2rem;
+
+        &:first-child{
+          padding-top: 0.8rem;
+        }
+
+        @media screen and (max-width: 980px)  {
+          padding-top: 0;
+          margin-bottom: 0;
+        }
+      }
+
+      a {
+        display: block;
+        background-color: var(--color-light);
+        padding: 0.2rem 0.4rem;
+      }
     }
   }
 
@@ -187,6 +232,8 @@ import menuEN from '@/data/menu-en.yaml'
 import menuRU from '@/data/menu-ru.yaml'
 import langs from '@/data/langs.yaml'
 
+import { geturl } from './mixins/geturl'
+
 // components: {
 //     Lang: () => import('~/components/Lang.vue')
 // }
@@ -196,6 +243,8 @@ export default {
 	props: {
       lang: { type: String, default: 'ru' }
   },
+
+  mixins: [geturl],
 
   data(){
     return {
