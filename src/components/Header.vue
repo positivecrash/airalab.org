@@ -6,7 +6,10 @@
       <div class="d-t w-full">
         <div class="d-t_cell align-v-m">
 
-          <g-link :to="'/' + lang + '/'" class="header__logo"><g-image alt="" src="~/assets/images/logo-airalabrus.png" quality="100"/></g-link>
+          <g-link :to="'/' + lang + '/'" class="header__logo">
+            <g-image v-if="lang == 'en'" alt="" src="~/assets/images/logo-airalabrus.png" quality="100"/>
+            <g-image v-if="lang == 'ru'" alt="" src="~/assets/images/logo-airalabrus-ru.png" quality="100"/>
+          </g-link>
         </div>
 
         <div class="d-t_cell align-v-m t-align-right">
