@@ -76,8 +76,8 @@
       }
 
     &__logo{
-      display: inline-block;
-      width: 230px;
+      display: block;
+      width: 210px;
 
       img{
         display: block;
