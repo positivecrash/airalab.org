@@ -15,4 +15,10 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('LayoutEN', LayoutEN)
 
   Vue.directive('in-viewport', inViewportDirective)
+
+  // https://webmaster.yandex.ru/sites/
+  head.meta.push({
+    name: 'yandex-verification',
+    content: 'c3195085175df568'
+  })
 }
