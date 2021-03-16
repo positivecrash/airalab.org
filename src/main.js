@@ -17,8 +17,8 @@ export default function (Vue, { router, head, isClient }) {
   Vue.directive('in-viewport', inViewportDirective)
 
   // https://webmaster.yandex.ru/sites/
-  head.meta.push({
-    name: 'yandex-verification',
-    content: 'c3195085175df568'
-  })
+  // head.meta.push({
+  //   name: 'yandex-verification',
+  //   content: 'c3195085175df568'
+  // })
 }
