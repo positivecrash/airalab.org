@@ -9,30 +9,39 @@
 
       <div class="w-text section_half">
         <p class="t-paragraph-hyphened" v-html="text"/>
-    
-      <div class="section-bordered t-align-center">
-            <p><b>{{ description }}</b></p>
 
-            <form name="TinkoffPayForm" onsubmit="pay(this); return false;">
-              <input class="tinkoffPayRow" type="hidden" name="terminalkey" value="1538042640922">
-              <input class="tinkoffPayRow" type="hidden" name="frame" value="true">
+        <h2>{{ description }}</h2>
 
-              <input class="tinkoffPayRow" type="hidden" name="language" :value="lang">
-
-              <input class="tinkoffPayRow" type="hidden" name="frame" value="false">
-            
-              <div class="inp-paysum" id="donation-sum">
-                <input id="sum" type="text" value="" placeholder="0.00" required name="amount" class="tinkoffPayRow w-full">
-              </div>
-
-              <div class="btn-iconed btn-iconed--pay">
-                  <input class="btn btn-yellow w-full tinkoffPayRow" id="sum-submit" type="submit" :value="button">
-              </div>
-              <g-image class="i-payment-methods" alt="Visa, MasterCard, Maestro, МИР" src="~/assets/images/payment-methods.png"/>
-            </form>
-
+        <div class="grid-2">
+          <div class="qrcode section-bordered t-align-center">
+            <p><b>{{ qrcodeTitle }}</b></p>
+            <g-image src="~/assets/images/QR-donate.png" />
           </div>
-        </div>
+      
+          <div class="section-bordered t-align-center">
+              <p><b>{{ donateTitle }}</b></p>
+
+              <form name="TinkoffPayForm" onsubmit="pay(this); return false;">
+                <input class="tinkoffPayRow" type="hidden" name="terminalkey" value="1538042640922">
+                <input class="tinkoffPayRow" type="hidden" name="frame" value="true">
+
+                <input class="tinkoffPayRow" type="hidden" name="language" :value="lang">
+
+                <input class="tinkoffPayRow" type="hidden" name="frame" value="false">
+              
+                <div class="inp-paysum" id="donation-sum">
+                  <input id="sum" type="text" value="" placeholder="0.00" required name="amount" class="tinkoffPayRow w-full">
+                </div>
+
+                <div class="btn-iconed btn-iconed--pay">
+                    <input class="btn btn-yellow w-full tinkoffPayRow" id="sum-submit" type="submit" :value="button">
+                </div>
+                <g-image class="i-payment-methods" alt="Visa, MasterCard, Maestro, МИР" src="~/assets/images/payment-methods.png"/>
+              </form>
+
+            </div>
+          </div>
+      </div>
 
   </div>
 
@@ -92,6 +101,8 @@ export default {
   props: {
       title: { type: String, default: '' },
       text: { type: String, default: '' },
+      qrcodeTitle: { type: String, default: '' },
+      donateTitle: { type: String, default: '' },
       description: { type: String, default: '' },
       lang: { type: String, default: '' },
       button: { type: String, default: '' }
@@ -147,4 +158,26 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+  .qrcode {
+    // margin-bottom: 40px;
+
+    img {
+      display: inline-block;
+      max-width: 100%;
+      width: 200px;
+    }
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    @media screen and (max-width:570px) {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
 
