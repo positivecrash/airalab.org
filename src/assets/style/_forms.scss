@@ -97,3 +97,9 @@ a.btn-yellow, input.btn-yellow, button.btn-yellow{
 	background-color: var(--color-yellow);
 	&, &:hover { color: var(--color-dark); }
 }
+
+a.btn-black, input.btn-black, button.btn-black{
+	background-color: #000;
+	& { color: #fff; }
+	&:hover { color: #fff; background-color: var(--color-red); }
+}

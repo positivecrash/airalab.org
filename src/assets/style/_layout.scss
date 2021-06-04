@@ -29,6 +29,11 @@ background-color: var(--color-light);
 color: var(--color-dark);
 }
 
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
 .page-inside{
   padding-top: 5rem;
   padding-bottom: 8rem;
@@ -87,10 +92,14 @@ position: relative
   padding-bottom: var(--space);
 }
 
-.section-gray{
+.section-gray, .section-yellow{
   margin-top: calc( var(--space) * 2 );
   margin-bottom: calc( var(--space) * 2 );
   background-color: var(--color-lightgray);
+}
+
+.section-yellow {
+  background-color: var(--color-yellow);
 }
 
 .section-bordered{
