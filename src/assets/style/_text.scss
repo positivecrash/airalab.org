@@ -119,3 +119,11 @@ ol.ol-anounce {
 	margin-top: calc(var(--space)*2);
 	margin-bottom: calc(var(--space)*2);
 }
+
+.hyphens{
+	text-align: justify !important;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+  }

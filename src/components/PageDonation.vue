@@ -1,6 +1,7 @@
 <template>
 
     <div class="page-inside donation">
+
     <div class="w-text">
         <div class="texthighlight_yellow t-align-center">
           <h1>{{ title }}</h1>
@@ -8,7 +9,13 @@
       </div>
 
       <div class="w-text section_half">
-        <p class="t-paragraph-hyphened" v-html="text"/>
+        <p class="hyphens" v-html="text"/>
+
+        <!-- <p class="hyphens">
+          Мы российская автономная некоммерческая организация, занимаемся исследованиями 
+          в области Умных городов и Индустрии 4.0. При работе над проектами мы используем большое количество времени 
+          высококвалифицированных инженеров, деньги на сопутствующее оборудование, интернет и кофе. Познакомьтесь с 
+          нашей деятельностью, почитав <a href=' + this.$static.metadata.blogRU + ' target=_blank>блог</a> или <a href='/ru/services'>информацию о разработках</a></p> -->
 
         <h2>{{ description }}</h2>
 
