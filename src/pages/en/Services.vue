@@ -2,12 +2,12 @@
   <LayoutEN>
     <MetaInfo
       :metaSiteName = "this.$static.metadata.siteNameEN"
-      metaTitle = "Services"
+      metaTitle = "Our research"
       :metaDescription = "this.$static.metadata.siteDescriptionEN"
     />
 
     <PageContent 
-      title="Services"
+      title="Our research"
       service1Title="Public Air Quality Monitoring Network"
       service1Link="/en/air-monitoring"
       service1Desc="We have launched, continuously developing and increasing decentralized network of independent air sensors worldwide. 

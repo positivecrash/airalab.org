@@ -2,12 +2,12 @@
   <LayoutRU>
     <MetaInfo
       :metaSiteName = "this.$static.metadata.siteNameRU"
-      metaTitle = "Сервисы"
+      metaTitle = "Наши разработки"
       :metaDescription = "this.$static.metadata.siteDescriptionRU"
     />
 
     <PageContent 
-      title="Сервисы"
+      title="Наши разработки"
       service1Title="Сеть гражданского мониторинга"
       service1Link="/ru/air-monitoring"
       service1Desc="Мы разработали и расширяем сеть независимых датчиков воздуха по всему миру. 
