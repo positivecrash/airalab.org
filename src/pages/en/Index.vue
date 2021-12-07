@@ -27,3 +27,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  #app {
+    background-color: var(--color-blue)
+  }
+</style>
