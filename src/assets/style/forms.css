@@ -1,0 +1,68 @@
+/*This code needs to be rewritten*/
+
+input, button, *[class *= 'btn-']
+{
+	appearance: none;
+	background-color: var(--color-lightgray);
+	border: 1px solid var(--color-gray);
+	cursor: pointer;
+	display: inline-block;
+	font-size: var(--text-size-base);
+	padding: calc(var(--space)/2) var(--space);
+	text-align: center;
+  	border-radius: calc(var(--space)*2);
+  	box-sizing: border-box;
+  	font-weight: 500;
+  	margin-bottom: calc(var(--space)/2);
+  	transition: all 0.2s ease-in-out;
+}
+
+input[disabled], input[disabled]:hover, button[disabled], button[disabled]:hover{
+	cursor: default;
+	opacity: 0.7;
+}
+
+input, input:hover, input:focus, input:visited,
+button, button:hover, button:focus, button:visited,
+*[class *= 'btn-'], *[class *= 'btn-']:hover, *[class *= 'btn-']:focus, *[class *= 'btn-']:visited
+{
+	text-decoration: none;
+	text-decoration: none !important;
+}
+
+input:hover, button:hover, *[class *= 'btn-']:hover
+{ opacity: 0.9; }
+
+input:not([type='submit']).error{
+	animation: 0.2s ease-in-out Shake 2;
+	border-color: var(--color-red);
+}
+
+
+@keyframes Shake {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+*[class *= 'btn-blue'] { background-color: var(--color-blue); color: var(--color-light); }
+*[class *= 'btn-red'] { background-color: var(--color-red); color: var(--color-light); }
+*[class *= 'btn-green'] { background-color: var(--color-green); color: var(--color-light); }
+*[class *= 'btn-yellow'] { background-color: var(--color-yellow); color: var(--color-light); }
+*[class *= 'btn-black'] { background-color: #000; color: #fff; }
+
+*[class *= 'btn-blue']:hover,
+*[class *= 'btn-red']:hover,
+*[class *= 'btn-green']:hover
+{ color: var(--color-light); }
+
+*[class *= 'btn-yellow']:hover { color: var(--color-dark); }
+
+*[class *= 'btn-black']:hover { color: #fff; background-color: var(--color-red); }

@@ -19,18 +19,12 @@
           </a>
 
           <ul class="header-nav-desktop" :class="{active: isActive}" v-if="menuEN || menuRU">
-            <template v-if="lang == 'en'">
-                <template v-if="menuEN" v-for="(item, key) in menuEN">
-
-                  <li><g-link :to="item.link">{{item.title}}</g-link></li>
-                </template>
+            <template v-if="lang == 'en' && menuEN">
+              <li v-for="(item, key) in menuEN" v-bind:key="key"><g-link :to="item.link">{{item.title}}</g-link></li>
             </template>
 
-            <template v-if="lang == 'ru'">
-                <template v-if="menuRU" v-for="(item, key) in menuRU">
-
-                  <li><g-link :to="item.link">{{item.title}}</g-link></li>
-                </template>
+            <template v-if="lang == 'ru' && menuRU">
+                <li v-for="(item, key) in menuRU" v-bind:key="key"><g-link :to="item.link">{{item.title}}</g-link></li>
             </template>
 
             <li v-if="langs" class="langTog">
@@ -38,7 +32,7 @@
 
               <ul class="langTog__menu">
                 <template v-for="(item, key) in langs">
-                  <li v-if="item.lang != lang"><a :href="geturl(item.lang)">{{ item.lang }}</a></li>
+                  <li v-if="item.lang != lang" v-bind:key="key"><a :href="geturl(item.lang)">{{ item.lang }}</a></li>
                 </template>
               </ul>
             </li>
@@ -53,7 +47,7 @@
 </template>
 
 
-<style lang="scss">
+<style scoped>
 
   .header{
 
@@ -64,165 +58,145 @@
     padding: 20px 0;
     position: relative;
     z-index: 10;
-
-    a
-      {
-        &, &:hover, &:focus, &:visited{
-          text-decoration: none;
-          text-decoration: none !important;
-        }
-
-        color: var(--color-light);
-      }
-
-    &__logo{
-      display: block;
-      width: 210px;
-
-      img{
-        display: block;
-        max-width: 100%;
-        max-height: 100%;
-      }
-    }
   }
 
-  .header-nav-desktop
-  {
+  .header a, .header a:hover, .header a:focus, .header a:visited {
+    text-decoration: none;
+    text-decoration: none !important;
+  }
+
+  .header a {
+    color: var(--color-light);
+  }
+
+  .header__logo {
+    display: block;
+    width: 210px;
+  }
+
+  .header__logo img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .header-nav-desktop {
     margin-left: 0;
     margin-bottom: 0;
     list-style: none;
     text-align: right;
-
-    li
-      {
-        display: inline-block;
-        margin-left: 40px;
-        margin-bottom: 0;
-
-        &:first-child { margin-left: 0;}
-
-        a{
-          &.active{
-            cursor: default;
-            &, &:hover { color: var(--color-orange); }
-          }
-
-          &:hover
-            {
-                color: var(--color-blue);
-            }
-        }
-
-      }
-
-
-      @media screen and (max-width: 980px){
-        opacity: 0;
-
-        position: absolute;
-        right: 0;
-        top: 80px;
-        background-color: var(--color-dark);
-
-        padding: 10px 0;
-    
-
-        li
-          {
-            display: block;
-            margin-left: 0;
-            margin-bottom: var(--space);
-            text-align: right;
-            padding: calc( var(--paddings)/2 ) var(--paddings) 0;
-          }
-
-        &.active
-          {
-            opacity: 0;
-            animation: 0.3s fadeIn ease-in forwards;
-          }
-      }
   }
 
-  #header-nav-toggler 
-    {
-      display: none;
+  .header-nav-desktop li {
+    display: inline-block;
+    margin-left: 40px;
+    margin-bottom: 0;
+  }
 
-      @media screen and (max-width: 980px) 
-        {
-          display: block;
+  .header-nav-desktop li:first-child { margin-left: 0;}
 
-          .sprite-basic-hamburger-close { display: none; }
+  .header-nav-desktop li a.active, .header-nav-desktop li a.active:hover {
+    color: var(--color-orange);
+    cursor: default;
+  }
 
-          &.active .sprite-basic-hamburger {display: none; }
-          &.active .sprite-basic-hamburger-close {display: inline-block; }
-        }
-    }
+  #header-nav-toggler {
+    display: none;
+  }
 
   .langTog {
-
     text-transform: uppercase;
     position: relative;
+  }
 
-    &:hover {
-      .langTog__cur {
-        background-color: var(--color-light);
-        color: var(--color-blue);
-      }
+  .langTog:hover .langTog__cur {
+    background-color: var(--color-light);
+    color: var(--color-blue);
+  }
 
-      .langTog__menu{
-        opacity: 1;
-      }
-    }
+  .langTog:hover .langTog__menu {
+    opacity: 1;
+  }
 
-    &__cur {
-      border: 1px solid var(--color-light);
-      padding: 0.2rem 0.4rem;
-      
-      &__text {
-        vertical-align: middle;
-      }
+  .langTog__cur {
+    border: 1px solid var(--color-light);
+    padding: 0.2rem 0.4rem;
+  }
 
-      &__arrow {
-        vertical-align: top;
-        line-height: 1;
-        margin-left: 0.2rem;
-      }
-    }
+  .langTog__cur__text {
+    vertical-align: middle;
+  }
 
-    &__menu {
-      transition: 0.2s ease opacity;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      margin-left: 0;
-      text-align: left;
+  .langTog__cur__arrow {
+    vertical-align: top;
+    line-height: 1;
+    margin-left: 0.2rem;
+  }
+
+  .langTog__menu {
+    color: var(--color-dark);
+    transition: 0.2s ease opacity;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-left: 0;
+    text-align: left;
+    opacity: 0;
+  }
+
+  .langTog__menu a { 
+    color: var(--color-dark);
+    display: block;
+    background-color: var(--color-light);
+    padding: 0.2rem 0.4rem;
+  }
+
+  .langTog__menu li {
+    display: block;
+    margin-left: 0;
+    padding-top: 0.2rem;
+  }
+
+  .langTog__menu li:first-child{
+    padding-top: 0.8rem;
+  }
+
+  @media screen and (max-width: 980px) {
+    .header-nav-desktop {
       opacity: 0;
+      position: absolute;
+      right: 0;
+      top: 80px;
+      background-color: var(--color-dark);
+      padding: 10px 0;
+    }
 
-      &, a { color: var(--color-dark); }
+    .header-nav-desktop.active
+    {
+      opacity: 0;
+      animation: 0.3s fadeIn ease-in forwards;
+    }
 
-      li {
-        display: block;
-        margin-left: 0;
-        padding-top: 0.2rem;
+    .header-nav-desktop li {
+      display: block;
+      margin-left: 0;
+      margin-bottom: var(--space);
+      text-align: right;
+      padding: calc( var(--paddings)/2 ) var(--paddings) 0;
+    }
 
-        &:first-child{
-          padding-top: 0.8rem;
-        }
+    #header-nav-toggler {
+      display: block;
+    }
 
-        @media screen and (max-width: 980px)  {
-          padding-top: 0;
-          margin-bottom: 0;
-        }
-      }
+    #header-nav-toggler .sprite-basic-hamburger-close { display: none; }
+    #header-nav-toggler.active .sprite-basic-hamburger {display: none; }
+    #header-nav-toggler.active .sprite-basic-hamburger-close {display: inline-block; }
 
-      a {
-        display: block;
-        background-color: var(--color-light);
-        padding: 0.2rem 0.4rem;
-      }
+    .langTog__menu li {
+      padding-top: 0;
+      margin-bottom: 0;
     }
   }
 

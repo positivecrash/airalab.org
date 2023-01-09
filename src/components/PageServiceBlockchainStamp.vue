@@ -168,364 +168,323 @@
 </template>
 
 
-<style lang="scss">
+<style scoped>
 
-	.collaborate{
+.collaborate__item .inside {
+	padding-left: var(--space);
+	padding-right: var(--space);
+	padding-top: calc(var(--space)*2);
+	padding-bottom: calc(var(--space)*2);
+}
 
-		&__item{
-			.inside{
-				padding-left: var(--space);
-				padding-right: var(--space);
-				padding-top: calc(var(--space)*2);
-				padding-bottom: calc(var(--space)*2);
-			}
+.collaborate__item__img img {
+	display: inline-block;
+	max-width: 100%;
+}
 
-			&__img{
-				img{
-					display: inline-block;
-					max-width: 100%;
+@media screen and (max-width: 720px){
+	.collaborate__item__img img { max-width: 50%; }
+}
 
-					@media screen and (max-width: 720px){
-						max-width: 50%;
-					}
-				}
-			}
-		}
+.shrimps {
+	margin-bottom: calc(var(--space)*2);
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+
+.shrimps__pack {
+	position: relative;
+	transform: scale(0);
+	transform-origin: 50% 50%;
+	width: 212px;
+	z-index: 10;
+}
+
+*[class *= 'shrimps__pack_']:not(.shrimps__pack_1) {
+	left: 50%;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 212px;
+}
+
+*[class *= 'shrimps__pack_']:not(.shrimps__pack_1) img {
+	width: 100%;
+}
+
+.shrimps__ice {
+	opacity: 0;
+	position: absolute;
+	width: 70px;
+	z-index: 9;
+}
+
+.shrimps__ice img { width: 100%; }
+
+.shrimps__ice_1 {
+	left: calc(50% + 10px);
+	top: 80px;
+	transform: scale(.8);
+}
+
+.shrimps__ice_2 {
+	left: calc(50% - 10px);
+	top: 120px;
+	transform: scale(.5) rotate(40deg);
+}
+
+.shrimps__ice_3 {
+	left: calc(50% - 60px);
+	top: 125px;
+	transform: scale(0.72) rotate(-90deg);
+}
+
+.shrimps__ice_4 {
+	left: calc(50% - 70px);
+	top: 50px;
+	transform: scale(.45) rotate(-40deg);
+}
+
+.shrimps__ice_5 {
+	left: calc(50% + 30px);
+	top: 160px;
+	transform: scale(.58) rotate(10deg);
+}
+
+.shrimps__ice_6 {
+	left: calc(50% + 10px);
+	top: 170px;
+	transform: scale(.6) rotate(-40deg);
+}
+
+.shrimps__ice_7 {
+	left: calc(50% - 40px);
+	top: 200px;
+	transform: scale(1.1) rotate(70deg);
+}
+
+.shrimps__ice_8 {
+	left: calc(50% + 20px);
+	top: 230px;
+	transform: scale(.65) rotate(30deg);
+}
+
+.shrimps__right, .shrimps__left {
+	bottom: 0;
+	position: absolute;
+	top: 0;
+	width: 50%;
+}
+
+.shrimps__right__item, .shrimps__left__item {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	transform-origin: 50% 50%;
+	width: 90px;
+}
+
+.shrimps__right__item img, .shrimps__left__item img {
+	width: 100%;
+}
+
+.shrimps__right { right: 0; }
+.shrimps__right__item { left: 300px; }
+.shrimps__left { left: 0; }
+.shrimps__left__item { right: 300px; }
+
+.shrimps__qr {
+	bottom: 40px;
+	left: calc( 50% + 10px );
+	opacity: 0;
+	position: absolute;
+	width: 60px;
+	z-index: 12;
+}
+
+.shrimps__qr img {
+	width: 100%;
+}
+
+/* rudiment from scss, need to be rewritten */
+.shrimps {
+	--start_ice: 1.5s;
+	--speed_ice: 0.4s;
+	--speed_shrimp: 0.6s;
+	--speed_qr: 0.4s;
+	--func_shrimp: cubic-bezier(.02,.52,.98,.01);
+	--func_packs: cubic-bezier(0,.59,.57,.18);
+}
+.shrimps.in-viewport .shrimps__pack { animation: 1s cubic-bezier(.02,.52,.69,-0.3) 0.6s scaleIn forwards; }
+.shrimps.in-viewport .shrimps__ice_1 { animation: var(--speed_ice) ease-in var(--start_ice) fadeIn forwards; }
+.shrimps.in-viewport .shrimps__ice_2 { animation: var(--speed_ice) ease-in calc(var(--start_ice)/2) fadeIn forwards; }
+.shrimps.in-viewport .shrimps__ice_3 { animation: var(--speed_ice) ease-in calc(var(--start_ice) + (var(--speed_ice)/2) * 2) fadeIn forwards; }
+.shrimps.in-viewport .shrimps__ice_4 { animation: var(--speed_ice) ease-in calc(var(--start_ice) + (var(--speed_ice)/2) * 3) fadeIn forwards; }
+.shrimps.in-viewport .shrimps__ice_5 { animation: var(--speed_ice) ease-in calc(var(--start_ice) + (var(--speed_ice)/2) * 4) fadeIn forwards; }
+.shrimps.in-viewport .shrimps__ice_6 { animation: var(--speed_ice) ease-in calc(var(--start_ice) + (var(--speed_ice)/2) * 5) fadeIn forwards; }
+.shrimps.in-viewport .shrimps__ice_7 { animation: var(--speed_ice) ease-in calc(var(--start_ice) + (var(--speed_ice)/2) * 6) fadeIn forwards; }
+.shrimps.in-viewport .shrimps__ice_8 { animation: var(--speed_ice) ease-in calc(var(--start_ice) + (var(--speed_ice)/2) * 7) fadeIn forwards; }
+
+.shrimps.in-viewport .shrimps__right__item_1{ animation: var(--speed_shrimp) var(--func_shrimp) calc(var(--start_ice) + (var(--speed_ice)/2) * 7) shrimp1 forwards; }
+.shrimps.in-viewport .shrimps__right__item_2{ animation: var(--speed_shrimp) var(--func_shrimp) calc(var(--start_ice) + (var(--speed_ice)/2) * 8) shrimp2 forwards; }
+.shrimps.in-viewport .shrimps__right__item_3{ animation: var(--speed_shrimp) var(--func_shrimp) calc(var(--start_ice) + (var(--speed_ice)/2) * 9) shrimp3 forwards; }
+.shrimps.in-viewport .shrimps__right__item_4{ animation: var(--speed_shrimp) var(--func_shrimp) calc(var(--start_ice) + (var(--speed_ice)/2) * 10) shrimp4 forwards; }
+.shrimps.in-viewport .shrimps__right__item_5{ animation: var(--speed_shrimp) var(--func_shrimp) calc(var(--start_ice) + (var(--speed_ice)/2) * 11) shrimp5 forwards; }
+
+.shrimps.in-viewport .shrimps__left__item_1{ animation: var(--speed_shrimp) var(--func_shrimp) calc(var(--start_ice) + (var(--speed_ice)/2) * 7) shrimp6 forwards; }
+.shrimps.in-viewport .shrimps__left__item_2{ animation: var(--speed_shrimp) var(--func_shrimp) calc(var(--start_ice) + (var(--speed_ice)/2) * 8) shrimp7 forwards; }
+.shrimps.in-viewport .shrimps__left__item_3{ animation: var(--speed_shrimp) var(--func_shrimp) calc(var(--start_ice) + (var(--speed_ice)/2) * 9) shrimp8 forwards; }
+.shrimps.in-viewport .shrimps__left__item_4{ animation: var(--speed_shrimp) var(--func_shrimp) calc(var(--start_ice) + (var(--speed_ice)/2) * 10) shrim9 forwards; }
+.shrimps.in-viewport .shrimps__left__item_5{ animation: var(--speed_shrimp) var(--func_shrimp) calc(var(--start_ice) + (var(--speed_ice)/2) * 11) shrimp10 forwards; }
+
+
+.shrimps.in-viewport .shrimps__qr{ animation: var(--speed_qr) ease-in calc(var(--start_ice) + (var(--speed_ice)/2) * 15) fadeIn forwards; }
+
+.shrimps.in-viewport .shrimps__pack_2 {
+	animation: var(--speed_qr) ease-in calc(var(--start_ice) + (var(--speed_ice)/2) * 17) fadeIn forwards, var(--speed_qr) var(--func_packs) calc(var(--start_ice) + (var(--speed_ice)/2) * 17) pack2 forwards;
+}
+
+.shrimps.in-viewport .shrimps__pack_3 {
+	animation: var(--speed_qr) ease-in calc(var(--start_ice) + (var(--speed_ice)/2) * 17) fadeIn forwards, var(--speed_qr) var(--func_packs) calc(var(--start_ice) + (var(--speed_ice)/2) * 17) pack3 forwards;
+}
+
+.shrimps.in-viewport .shrimps__pack_4 {
+	animation: var(--speed_qr) ease-in calc(var(--start_ice) + (var(--speed_ice)/2) * 17) fadeIn forwards, var(--speed_qr) var(--func_packs) calc(var(--start_ice) + (var(--speed_ice)/2) * 17) pack4 forwards;
+}
+
+.shrimps.in-viewport .shrimps__pack_5 {
+	animation: var(--speed_qr) ease-in calc(var(--start_ice) + (var(--speed_ice)/2) * 17) fadeIn forwards, var(--speed_qr) var(--func_packs) calc(var(--start_ice) + (var(--speed_ice)/2) * 17) pack5 forwards;
+}
+
+.shrimps.in-viewport .shrimps__pack_6 {
+	animation: var(--speed_qr) ease-in calc(var(--start_ice) + (var(--speed_ice)/2) * 17) fadeIn forwards, var(--speed_qr) var(--func_packs) calc(var(--start_ice) + (var(--speed_ice)/2) * 17) pack6 forwards;
+}
+
+.shrimps.in-viewport .shrimps__pack_7 {
+	animation: var(--speed_qr) ease-in calc(var(--start_ice) + (var(--speed_ice)/2) * 17) fadeIn forwards, var(--speed_qr) var(--func_packs) calc(var(--start_ice) + (var(--speed_ice)/2) * 17) pack7 forwards;
+}
+
+
+
+.stampTech {
+	position: relative;
+	margin-bottom: var(--space);
+}
+
+.stampTech__options {
+	box-sizing: border-box;
+	display: table;
+	margin-top: var(--space);
+	position: relative;
+	table-layout: fixed;
+	z-index: 1;
+}
+
+.stampTech__options__item {
+	background-color: var(--color-light);
+	box-sizing: border-box;
+	display: table-cell;
+	padding: 2rem 4rem;
+	position: relative;
+	width: 50%;
+}
+
+.stampTech__options__item:after {
+	background-color: var(--color-yellow);
+	bottom: -1rem;
+	content:"";
+	position: absolute;
+	right: 0;
+	top: -1rem;
+	width: 1px;
+}
+
+.stampTech__options__item:before {
+	background-color: var(--color-yellow);
+	bottom: 0;
+	content:"";
+	display: none;
+	height: 1px;
+	left: 0;
+	position: absolute;
+	right: 0;
+}
+
+.stampTech__options__item:last-child:after {
+	display: none;
+}
+
+.stampTech__options__item__img {
+	margin-bottom: var(--space);
+	position: relative;
+}
+
+.stampTech__options__item__img img {
+	max-width: 100%;
+}
+
+.stampTech__options__item__img > b {
+	background-color: var(--color-yellow);
+	border: .5rem solid var(--color-light);
+	bottom: 20px;
+	font-size: 4rem;
+	font-weight: 700;
+	left: -20px;
+	line-height: 1;
+	padding: .5rem 1rem;
+	position: absolute;
+	z-index: 10;
+}
+
+.stampTech__product {
+	--duration-product: 5s;
+	--delay-product: 1s;
+
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	width: 100%;
+	z-index: 0;
+}
+
+.stampTech__product__gray, .stampTech__product__color {
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 50%;
+}
+
+.stampTech__product__gray .item, .stampTech__product__color .item {
+	display: inline-block;
+	left: -1000px;
+	margin-right: 4rem;
+	opacity: 0;
+	transform: translate3d(0, 0, 0);
+}
+
+.stampTech__product.in-viewport .stampTech__product__gray .item {
+	animation: moveProd var(--duration-product) ease var(--delay-product) infinite backwards, fadeIn 0.2s linear var(--delay-product) forwards;
+}
+
+.stampTech__product.in-viewport .stampTech__product__color .item {
+	animation: moveProd var(--duration-product) ease var(--duration-product)/2 infinite backwards, fadeIn 0.2s linear var(--duration-product)/2 forwards;
+}
+
+@media screen and (max-width: 1000px) {
+	.stampTech__product { display: none; }
+}
+
+@media screen and (max-width: 660px) {
+	.stampTech__options { display: block; }
+	.stampTech__options__item {
+		display: block;
+		width: 100%;
 	}
-
-	$start_ice: 1.5s;
-	$speed_ice: 0.4s;
-	$speed_shrimp: 0.6s;
-	$speed_qr: 0.4s;
-	$func_shrimp: cubic-bezier(.02,.52,.98,.01);
-	$func_packs: cubic-bezier(0,.59,.57,.18);
-
-	.shrimps{
-		text-align: center;
-		margin-bottom: calc(var(--space)*2);
-		position: relative;
-		overflow: hidden;
-
-		&__pack{
-			transform: scale(0);
-			transform-origin: 50% 50%;
-			position: relative;
-			z-index: 10;
-			width: 212px;
-		}
-
-		&__pack_2, &__pack_3, &__pack_4, &__pack_5, &__pack_6, &__pack_7{
-			position: absolute;
-			left: 50%;
-			opacity: 0;
-			top: 0;
-			width: 212px;
-
-			img{
-				width: 100%;
-			}
-		}
-
-		&__ice{
-			position: absolute;
-			z-index: 9;
-			opacity: 0;
-			width: 70px;
-
-			img { width: 100%; }
-		}
-
-		&__ice_1{
-			transform: scale(.8);
-			top: 80px;
-			left: calc(50% + 10px);
-		}
-
-		&__ice_2{
-			transform: scale(.5) rotate(40deg);
-			top: 120px;
-			left: calc(50% - 10px);
-		}
-
-		&__ice_3{
-			transform: scale(0.72) rotate(-90deg);
-			top: 125px;
-			left: calc(50% - 60px);
-		}
-
-		&__ice_4{
-			transform: scale(.45) rotate(-40deg);
-			top: 50px;
-			left: calc(50% - 70px);
-		}
-
-		&__ice_5{
-			transform: scale(.58) rotate(10deg);
-			top: 160px;
-			left: calc(50% + 30px);
-		}
-
-		&__ice_6{
-			transform: scale(.6) rotate(-40deg);
-			top: 170px;
-			left: calc(50% + 10px);
-		}
-
-		&__ice_7{
-			transform: scale(1.1) rotate(70deg);
-			top: 200px;
-			left: calc(50% - 40px);
-		}
-
-		&__ice_8{
-			transform: scale(.65) rotate(30deg);
-			top: 230px;
-			left: calc(50% + 20px);
-		}
-
-		&__right, &__left{
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			width: 50%;
-
-			&__item{
-				position: absolute;
-				transform-origin: 50% 50%;
-				opacity: 0;
-				top: 0;
-				width: 90px;
-
-				img{
-					width: 100%;
-				}
-			}
-		}
-
-		&__right{
-			right: 0;
-
-			&__item{
-				left: 300px;
-			}
-		}
-
-		&__left{
-			left: 0;
-
-			&__item{
-				right: 300px;
-			}
-		}
-
-		&__qr{
-			position: absolute;
-			bottom: 40px;
-			left: calc( 50% + 10px );
-			z-index: 12;
-			opacity: 0;
-			width: 60px;
-
-			img{
-				width: 100%;
-			}
-		}
-
-		&.in-viewport{
-			.shrimps__pack{ animation: 1s cubic-bezier(.02,.52,.69,-0.3) 0.6s scaleIn forwards; }
-			.shrimps__ice_1{ animation: $speed_ice ease-in $start_ice fadeIn forwards; }
-			.shrimps__ice_2{ animation: $speed_ice ease-in $start_ice+$speed_ice/2 fadeIn forwards; }
-			.shrimps__ice_3{ animation: $speed_ice ease-in $start_ice+($speed_ice/2)*2 fadeIn forwards; }
-			.shrimps__ice_4{ animation: $speed_ice ease-in $start_ice+($speed_ice/2)*3 fadeIn forwards; }
-			.shrimps__ice_5{ animation: $speed_ice ease-in $start_ice+($speed_ice/2)*4 fadeIn forwards; }
-			.shrimps__ice_6{ animation: $speed_ice ease-in $start_ice+($speed_ice/2)*5 fadeIn forwards; }
-			.shrimps__ice_7{ animation: $speed_ice ease-in $start_ice+($speed_ice/2)*6 fadeIn forwards; }
-			.shrimps__ice_8{ animation: $speed_ice ease-in $start_ice+($speed_ice/2)*7 fadeIn forwards; }
-
-			.shrimps__right__item_1{ animation: $speed_shrimp $func_shrimp $start_ice+($speed_ice/2)*7 shrimp1 forwards; }
-			.shrimps__right__item_2{ animation: $speed_shrimp $func_shrimp $start_ice+($speed_ice/2)*8 shrimp2 forwards; }
-			.shrimps__right__item_3{ animation: $speed_shrimp $func_shrimp $start_ice+($speed_ice/2)*9 shrimp3 forwards; }
-			.shrimps__right__item_4{ animation: $speed_shrimp $func_shrimp $start_ice+($speed_ice/2)*10 shrimp4 forwards; }
-			.shrimps__right__item_5{ animation: $speed_shrimp $func_shrimp $start_ice+($speed_ice/2)*11 shrimp5 forwards; }
-
-
-			.shrimps__left__item_1{ animation: $speed_shrimp $func_shrimp $start_ice+($speed_ice/2)*7 shrimp6 forwards; }
-			.shrimps__left__item_2{ animation: $speed_shrimp $func_shrimp $start_ice+($speed_ice/2)*8 shrimp7 forwards; }
-			.shrimps__left__item_3{ animation: $speed_shrimp $func_shrimp $start_ice+($speed_ice/2)*9 shrimp8 forwards; }
-			.shrimps__left__item_4{ animation: $speed_shrimp $func_shrimp $start_ice+($speed_ice/2)*10 shrimp9 forwards; }
-			.shrimps__left__item_5{ animation: $speed_shrimp $func_shrimp $start_ice+($speed_ice/2)*11 shrimp10 forwards; }
-
-			.shrimps__qr{ animation: $speed_qr ease-in $start_ice+($speed_ice/2)*15 fadeIn forwards; }
-
-			.shrimps__pack_2 {
-				animation: $speed_qr ease-in $start_ice+($speed_ice/2)*17 fadeIn forwards, $speed_qr $func_packs $start_ice+($speed_ice/2)*17 pack2 forwards;
-			}
-
-			.shrimps__pack_3 {
-				animation: $speed_qr ease-in $start_ice+($speed_ice/2)*17 fadeIn forwards, $speed_qr $func_packs $start_ice+($speed_ice/2)*17 pack3 forwards;
-			}
-
-			.shrimps__pack_4 {
-				animation: $speed_qr ease-in $start_ice+($speed_ice/2)*17 fadeIn forwards, $speed_qr $func_packs $start_ice+($speed_ice/2)*17 pack4 forwards;
-			}
-
-			.shrimps__pack_5 {
-				animation: $speed_qr ease-in $start_ice+($speed_ice/2)*17 fadeIn forwards, $speed_qr $func_packs $start_ice+($speed_ice/2)*17 pack5 forwards;
-			}
-
-			.shrimps__pack_6 {
-				animation: $speed_qr ease-in $start_ice+($speed_ice/2)*17 fadeIn forwards, $speed_qr $func_packs $start_ice+($speed_ice/2)*17 pack6 forwards;
-			}
-
-			.shrimps__pack_7 {
-				animation: $speed_qr ease-in $start_ice+($speed_ice/2)*17 fadeIn forwards, $speed_qr $func_packs $start_ice+($speed_ice/2)*17 pack7 forwards;
-			}
-		}
-	}
-
-
-	.stampTech{
-
-		position: relative;
-		margin-bottom: var(--space);
-
-		&__options{
-			box-sizing: border-box;
-			display: table;
-			// width: 100%;
-			table-layout: fixed;
-
-			margin-top: var(--space);
-
-			position: relative;
-			z-index: 1;
-
-			&__item{
-				display: table-cell;
-				padding: 2rem 4rem;
-				background-color: var(--color-light);
-				width: 50%;
-				box-sizing: border-box;
-
-				position: relative;
-				&:after{
-					content:"";
-					width: 1px;
-					position: absolute;
-					top: -1rem;
-					bottom: -1rem;
-					right: 0;
-					background-color: var(--color-yellow);
-				}
-
-				&:before{
-					display: none;
-					content:"";
-					height: 1px;
-					position: absolute;
-					bottom: 0;
-					right: 0;
-					left: 0;
-					background-color: var(--color-yellow);
-				}
-
-				&:last-child{
-					&:after{
-						display: none;
-					}
-				}
-
-				&__img{
-					// height: 240px;
-					position: relative;
-					margin-bottom: var(--space);
-
-					img{
-						// position: absolute;
-						// bottom: 0;
-						// right: 0;
-						max-width: 100%;
-					}
-
-					& > b{
-						background-color: var(--color-yellow);
-						font-size: 4rem;
-						line-height: 1;
-						font-weight: 700;
-						padding: .5rem 1rem;
-
-						position: absolute;
-						left: -20px;
-						bottom: 20px;
-						z-index: 10;
-						border: .5rem solid var(--color-light);
-					}
-				}
-			}
-		}
-
-		
-
-		
-
-		&__product{
-			position: absolute;
-			z-index: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			width: 100%;
-
-			&__gray, &__color{
-				overflow: hidden;
-				white-space: nowrap;
-				display: inline-block;
-				width: 50%;
-
-				.item{
-					display: inline-block;
-					margin-right: 4rem;
-					transform: translate3d(0, 0, 0);
-					left: -1000px;
-					opacity: 0;
-				}
-			}
-
-			$duration_product: 5s;
-			$delay_product: 1s;
-
-			&.in-viewport{
-				.stampTech__product__gray{
-					.item{
-						animation: moveProd $duration_product ease $delay_product infinite backwards, fadeIn 0.2s linear $delay_product forwards;
-					}
-				}
-				.stampTech__product__color{
-					.item{
-						animation: moveProd $duration_product ease $duration_product/2 infinite backwards, fadeIn 0.2s linear $duration_product/2 forwards;
-					}
-				}
-			}
-
-			@media screen and (max-width: 1000px){
-				display: none;
-			}
-		}
-
-		@media screen and (max-width: 660px){
-			&__options{
-				display: block;
-
-				&__item{
-					display: block;
-					width: 100%;
-
-					&:after{ display: none; }
-					&:before { display: block; }
-				}
-			}
-		}
-	}
+	.stampTech__options__item:after{ display: none; }
+	.stampTech__options__item:before { display: block; }
+}
 </style>
 
 <static-query>

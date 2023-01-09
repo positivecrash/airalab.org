@@ -1,7 +1,6 @@
 body {
 	--text-size-base: 1.3rem;
 	--text-size-title: 2.5rem;
-	// --text-scale-ratio: 1.25;
 
 	--color-dark: #333;
 	--color-light: #fff;
@@ -17,9 +16,4 @@ body {
 	--space: 1.6rem;
   	--width-text: 820px;
   	--width-base: 1280px;
-
- //  	--mq-desktop: 1280px;
-	// --mq-tablet: 750px;
-	// --mq-mobile: 500px;
-	// --mq-menuhide: 980px;
 }

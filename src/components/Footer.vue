@@ -22,50 +22,43 @@
 </template>
 
 
-<style lang="scss">
+<style scoped>
 
-  footer[role='contentinfo']
-    {
-      background-color: #2c4c4b;
-      color: var(--color-light);
+  footer[role='contentinfo'] {
+    background-color: #2c4c4b;
+    bottom: 0;
+    color: var(--color-light);
+    padding: 20px 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
 
-      a {
-        color: var(--color-orange);
-        font-weight: 400;
+  footer[role='contentinfo'] a {
+    color: var(--color-orange);
+    font-weight: 400;
+  }
 
-        &, &:hover, &:focus, &:visited{
-          text-decoration: none;
-          text-decoration: none !important;
-        }
-      }
+  footer[role='contentinfo'] a, 
+  footer[role='contentinfo'] a:hover, 
+  footer[role='contentinfo'] a:focus,
+  footer[role='contentinfo'] a:visited {
+    text-decoration: none;
+    text-decoration: none !important;
+  }
 
-      padding: 20px 0;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 10;
+  .form-inline { 
+    max-width: 412px;
+  }
 
-
-      .form-inline
-        {
-          max-width: 412px;
-        }
-
-       @media screen and (max-width: 630px)
-        {
-
-          .footer-row
-            {
-              .d-t_cell
-                {
-                  display: block;
-                  text-align: center;
-                  padding-bottom: var(--space);
-                }
-            }
-        }
+  @media screen and (max-width: 630px) {
+    .footer-row .d-t_cell {
+      display: block;
+      text-align: center;
+      padding-bottom: var(--space);
     }
+  }
 </style>
 
 <static-query>

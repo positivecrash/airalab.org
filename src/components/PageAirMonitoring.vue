@@ -68,7 +68,7 @@
 </template>
 
 
-<style lang="scss">
+<style scoped>
 	#banner {
 		margin: calc(var(--space)*2) 0;
 	}
@@ -80,11 +80,11 @@
 		background-position: 0 100%;
 		padding-bottom: 115px;
 		position: relative;
+	}
 
-		& > .w-text {
-			position: relative;
-			z-index: 1;
-		}
+	#cityair > .w-text {
+		position: relative;
+		z-index: 1;
 	}
 
 	#cityair-house {
@@ -108,35 +108,35 @@
 		}
 	}
 
-	#yellowList {
-		font-weight: 500;
+	#yellowList { font-weight: 500; }
+	#yellowList p {
+		position: relative;
+	}
 
-		p {
-			position: relative;
-			&:not(:last-child) { margin-bottom: calc(var(--space)*2); }
+	#yellowList p:not(:last-child) {
+		margin-bottom: calc(var(--space)*2);
+	}
 
-			&::before, &::after {
-				content: "";
-				width: 100px;
-				height: 2px;
-				background: var(--color-light);
-				position: absolute;
-				top: calc(50%/2 - 1px)
-			}
+	#yellowList p::before, #yellowList p::after {
+		content: "";
+		width: 100px;
+		height: 2px;
+		background: var(--color-light);
+		position: absolute;
+		top: calc(50%/2 - 1px)
+	}
 
-			&::before { left: -120px }
-			&::after { right: -120px }
+	#yellowList p::before { left: -120px }
+	#yellowList p::after { right: -120px }
 
-			@media screen and (max-width: 760px) {
-				&::before, &::after { display: none; }
+	@media screen and (max-width: 760px) {
+		#yellowList p::before, #yellowList p::after { display: none; }
 
-				&:not(:last-child) { 
-					border-bottom: 1px solid var(--color-light);
-					padding-bottom: calc(var(--space)*2);
-				}
-				
-			}
+		#yellowList p:not(:last-child) { 
+			border-bottom: 1px solid var(--color-light);
+			padding-bottom: calc(var(--space)*2);
 		}
+		
 	}
 
 	.section-yellow {

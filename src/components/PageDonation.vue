@@ -55,49 +55,46 @@
 </template>
 
 
-<style lang="scss">
-  .donation{
-    &__banner{
-      display: block;
-      width: 900px;
-      max-width: 100%;
-      margin: calc(var(--space)*2) auto;
-    }
+<style scoped>
+  .donation__banner {
+    display: block;
+    width: 900px;
+    max-width: 100%;
+    margin: calc(var(--space)*2) auto;
+  }
 
-    .sec-bordered{
-      margin-top: calc(var(--space)*2);
-    }
+  .donation .sec-bordered{
+    margin-top: calc(var(--space)*2);
+  }
 
-    form{
+  .donation form {
       max-width: 300px;
       margin: 0 auto;
-    }
+  }
+  
+  .donation .inp-paysum {
+    position: relative;
+  }
 
-    .inp-paysum
-      {
-        position: relative;
+  .donation .inp-paysum input {
+    position: relative;
+    z-index: 0;
+    text-align: center;
+  }
 
-        input{
-          position: relative;
-          z-index: 0;
-          text-align: center;
-        }
-        &:after{
-          content:'₽';
-          position: absolute;
-          z-index: 1;
-          right: 22px;
-          top: 13px;
-          font-weight: 500;
-        }
-      }
+  .donation .inp-paysum:after {
+    content:'₽';
+    position: absolute;
+    z-index: 1;
+    right: 22px;
+    top: 13px;
+    font-weight: 500;
+  }
 
-
-    .i-payment-methods{
-      display: inline-block;
-      max-width: 100%;
-      margin-top: var(--space);
-    }
+  .i-payment-methods{
+    display: inline-block;
+    max-width: 100%;
+    margin-top: var(--space);
   }
 </style>
 
@@ -166,8 +163,8 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-  .qrcode {
+<style scoped>
+  /* .qrcode {
     // margin-bottom: 40px;
 
     img {
@@ -185,6 +182,6 @@ export default {
     @media screen and (max-width:570px) {
       grid-template-columns: 1fr;
     }
-  }
+  } */
 </style>
 

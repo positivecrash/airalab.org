@@ -4,6 +4,7 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
+    "develop-m1": "export NODE_OPTIONS=--openssl-legacy-provider && gridsome develop",
     "explore": "gridsome explore"
   },
   "dependencies": {
@@ -13,8 +14,11 @@
     "vue-in-viewport-directive": "^2.0.0"
   },
   "devDependencies": {
-    "node-sass": "^4.14.0",
-    "sass-loader": "^8.0.2",
     "vue-svg-loader": "^0.16.0"
+  },
+  "overrides": {
+    "gridsome": {
+      "sharp": "^0.30.7"
+    }
   }
 }

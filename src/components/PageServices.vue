@@ -30,48 +30,42 @@
 
 
 
-<style lang="scss" scoped>
+<style scoped>
 
 .item {
-  position: relative;
-  display: block;
   background-color: #f2f2f2;
-
-  overflow: hidden;
-  text-decoration: none;
-  padding: calc(var(--space) * 1.5);
+  display: block;
   margin-bottom: calc(var(--space) * 2);
-
-  img {
-      position: absolute;
-      z-index: 0;
-      bottom: 0;
-      right: 0;
-      max-width: 100%;
-    }
-
-  .desc {
-    position: relative;
-    z-index: 1;
-    color: #000;
-    font-weight: 500;
-
-    @media screen and (min-width: 1050px) {
-      width: 50%;
-    }
-
-    h2 {
-      margin-top: 0;
-      text-align: left;
-    }
-  }
-
-
-  @media screen and (max-width: 1050px) {
-    padding-bottom: 170px;
-  }
+  overflow: hidden;
+  padding: calc(var(--space) * 1.5);
+  position: relative;
+  text-decoration: none;
 }
 
+.item img {
+  bottom: 0;
+  max-width: 100%;
+  position: absolute;
+  right: 0;
+  z-index: 0;
+}
+
+.item .desc {
+  color: #000;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+.item .desc h2 {
+  margin-top: 0;
+  text-align: left;
+}
+
+@media screen and (min-width: 1050px) {
+  .item { padding-bottom: 170px; }
+  .item .desc { width: 50%; } 
+}
 </style>
 
 

@@ -1,5 +1,5 @@
 // Import main css
-import '~/assets/style/index.scss'
+import '~/assets/style/index.css'
 import inViewportDirective from 'vue-in-viewport-directive'
 
 

@@ -2,31 +2,21 @@
 
 html, body
 {
-position: relative;
-height: 100%;
-min-height: 100%;
+  position: relative;
+  height: 100%;
+  min-height: 100%;
 }
 
-html
-{
-font-size: 100%;
+html { font-size: 100%; }
 
-@media screen and (max-width: 750px) 
-  {
-    font-size: 90%;
-  }
-}
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: var(--text-size-base);
+  font-weight: 300;
+  line-height: 1.5;
 
-
-body
-{
-font-family: 'Roboto', Arial, Helvetica, sans-serif;
-font-size: var(--text-size-base);
-font-weight: 300;
-line-height: 1.5;
-
-background-color: var(--color-light);
-color: var(--color-dark);
+  background-color: var(--color-light);
+  color: var(--color-dark);
 }
 
 img {
@@ -34,23 +24,17 @@ img {
   max-width: 100%;
 }
 
-.page-inside{
+.page-inside {
   padding-top: 5rem;
   padding-bottom: 8rem;
-
-  @media screen and (max-width: 630px){
-    padding-bottom: 15rem;
-  }
 }
 
 .layout{
-min-height: 100%;
-position: relative
+  min-height: 100%;
+  position: relative
 }
 
-
-.w-paddings, .w-base, .w-text
-{
+.w-paddings, .w-base, .w-text {
   box-sizing: border-box;
   padding-left: var(--paddings);
   padding-right: var(--paddings);
@@ -107,10 +91,15 @@ position: relative
   padding: var(--space);
 }
 
-
-
 .grid{ display: grid; }
+
 
 @media screen and (min-width: 720px){
 	.grid-c3{ grid-template-columns: 1fr 1fr 1fr; }
+}
+
+@media screen and (max-width: 750px) 
+{
+  html { font-size: 90%; }
+  .page-inside { padding-bottom: 15rem; }
 }
