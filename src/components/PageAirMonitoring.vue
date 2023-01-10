@@ -1,9 +1,10 @@
 <template>
  
   	<ClientOnly>
-    <div class="page-inside service">
+    <div class="page-inside service air-monitoring">
 
     	<div class="w-text">
+					<h2 class="subtitle-blue">{{subtitle}}</h2>
 	        <div class="texthighlight_yellow t-align-center"><h1 v-html="title" /></div>
        	</div>
 
@@ -19,10 +20,18 @@
 				<h2>{{h21}}</h2>
 
 				<ol class="ol-anounce">
-					<li>{{list11}}</li>
-					<li>{{list12}}</li>
-					<li>{{list13}}</li>
-					<li>{{list14}}</li>
+					<li>
+            <p>{{list11}}</p>
+          </li>
+					<li>
+            <p>{{list12}}</p>
+          </li>
+					<li>
+            <p>{{list13}}</p>
+          </li>
+					<li>
+            <p>{{list14}}</p>
+          </li>
 				</ol>
 			</div>
 
@@ -57,9 +66,7 @@
 			<div id="yellowList" class="w-text t-align-center" v-html="commitSteps" />
 		</section>
 
-		<div class="w-text t-align-center">
-			<h3>{{endString1}} <g-link to="https://sensors.robonomics.network/#/">{{endString2}}</g-link>, {{endString3}} <g-link :to="'mailto:'+$static.metadata.email">email</g-link> {{endString4}} <g-link :to="linkDonate">{{endString5}}</g-link> ❤️ ({{endString6}})</h3>
-		</div>
+		<Donation :imgClass="imgClass" :donationLink="linkDonate" :donationButton="donationButton" :specialClass="specialClass"/>
 
 	</div>
 
@@ -69,6 +76,11 @@
 
 
 <style scoped>
+
+	.air-monitoring.page-inside {
+		padding-bottom: 0;
+	}
+
 	#banner {
 		margin: calc(var(--space)*2) 0;
 	}
@@ -160,6 +172,7 @@ export default {
 
 	props: {
       title: { type: String, default: '' },
+			subtitle: { type: String, default: '' },
       description: { type: String, default: '' },
       button: { type: String, default: '' },
       h21: { type: String, default: '' },
@@ -181,7 +194,14 @@ export default {
       endString5: { type: String, default: '' },
       endString6: { type: String, default: '' },
       linkDonate: { type: String, default: '' },
+			donationButton: { type: String, default: '' },
+			imgClass: { type: String, default: '' },
+			specialClass: { type: String, default: '' },
   	},
+
+		components: {
+			Donation: () => import('~/components/SupportUs.vue')
+		},
 
   	computed: {
 	    productNumber : function(){

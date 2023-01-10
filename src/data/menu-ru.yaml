@@ -1,15 +1,18 @@
 - title: Разработки
   link: /ru/services/
 
-- title: Блог
-  link: https://zen.yandex.ru/id/5b2f619a3acfb800a8af799a
-  
-- title: DAPP
-  link: https://dapp.airalab.org/
-
 - title: Контакты
   link: /ru/contacts/
 
 - title: Поддержите нас
   link: /ru/donation/
+  class: 'border-right'
+
+- title: Блог
+  link: https://zen.yandex.ru/id/5b2f619a3acfb800a8af799a
+  
+- title: DAPP
+  link: https://dapp.airalab.org/
+  class: 'border-right'
+
 

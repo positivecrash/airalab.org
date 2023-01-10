@@ -71,23 +71,33 @@ ol.ol-anounce li {
 	counter-increment: custom-counter;
 	font-weight: bold;
 	background-color: var(--color-light);
-	padding: 20px;
+	padding: 0;
 }
 
 ol.ol-anounce li::before {
 	content: counter(custom-counter);
 	font-size: 80px;
-	padding: 0 20px;
+	padding: 20px 40px;
 	margin-right: 20px;
 	background-color: var(--color-yellow);
 	text-align: center;
+	display: flex;
+	align-items: center;
 }
 
-@media screen and (min-width: 375px) {
+ol.ol-anounce li p {
+	padding: 20px;
+	font-weight: 500;
+	font-size: 1.3rem;
+	display: flex;
+	align-items: center;
+}
+
+@media screen and (min-width: 480px) {
 	ol.ol-anounce li { display: flex; }
 }
 
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 479px) {
 	ol.ol-anounce li::before { display: block; margin-right: 0; margin-bottom: 20px; }
 }
 
@@ -118,3 +128,9 @@ ol.ol-anounce li::before {
 	-ms-hyphens: auto;
 	hyphens: auto;
   }
+
+.subtitle-blue {
+	font-size: 1rem;
+	margin-bottom: 10px;
+	color: var(--color-blue);
+}

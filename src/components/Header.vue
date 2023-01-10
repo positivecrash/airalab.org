@@ -2,7 +2,7 @@
 
   <header class="header" role='banner'>
 
-    <div class="w-base">
+    <div class="w-paddings">
       <div class="d-t w-full">
         <div class="d-t_cell align-v-m">
 
@@ -20,15 +20,44 @@
 
           <ul class="header-nav-desktop" :class="{active: isActive}" v-if="menuEN || menuRU">
             <template v-if="lang == 'en' && menuEN">
-              <li v-for="(item, key) in menuEN" v-bind:key="key"><g-link :to="item.link">{{item.title}}</g-link></li>
+              <li 
+                :class="item.class" 
+                v-for="(item, key) in menuEN" 
+                v-bind:key="key"
+              >
+                <g-link 
+                  :to="item.link"
+                  :class="{active: 
+                    item.title === 'Our research' && $route.path.includes('air-monitoring') ||
+                    item.title === 'Our research' && $route.path.includes('water-monitoring') ||
+                    item.title === 'Our research' && $route.path.includes('service-blockchain-stamp')
+                  }"
+                >
+                  {{item.title}}
+                </g-link></li>
             </template>
 
             <template v-if="lang == 'ru' && menuRU">
-                <li v-for="(item, key) in menuRU" v-bind:key="key"><g-link :to="item.link">{{item.title}}</g-link></li>
+                <li 
+                  :class="item.class" 
+                  v-for="(item, key) in menuRU" 
+                  v-bind:key="key"
+                >
+                  <g-link 
+                    :to="item.link"
+                    :class="{active: 
+                      item.title === 'Разработки' && $route.path.includes('air-monitoring') ||
+                      item.title === 'Разработки' && $route.path.includes('water-monitoring') ||
+                      item.title === 'Разработки' && $route.path.includes('service-blockchain-stamp')
+                    }"
+                  >
+                    {{item.title}}
+                  </g-link>
+              </li>
             </template>
 
             <li v-if="langs" class="langTog">
-              <a href="javascript:;" class="langTog__cur"><span class="langTog__cur__text">{{ lang }}</span> <span class="langTog__cur__arrow">&#8964;</span></a>
+              <a href="javascript:;" class="langTog__cur"><span class="langTog__cur__text">{{ lang }}</span> <span class="langTog__cur__arrow">&#9207;</span></a>
 
               <ul class="langTog__menu">
                 <template v-for="(item, key) in langs">
@@ -51,7 +80,7 @@
 
   .header{
 
-    background-color: var(--color-dark);
+    background-color: var(--color-darkish);
     color: var(--color-light);
     font-size: calc( var(--text-size-base) * 0.9 );
 
@@ -89,15 +118,21 @@
 
   .header-nav-desktop li {
     display: inline-block;
-    margin-left: 40px;
+    margin-left: 30px;
     margin-bottom: 0;
+    font-weight: 500;
   }
 
   .header-nav-desktop li:first-child { margin-left: 0;}
 
+  .header-nav-desktop li.border-right {
+    padding-right: 30px;
+    border-right: 1px solid #ffffff5c;
+  }
+
   .header-nav-desktop li a.active, .header-nav-desktop li a.active:hover {
     color: var(--color-orange);
-    cursor: default;
+    /* cursor: default; */
   }
 
   #header-nav-toggler {
@@ -119,7 +154,7 @@
   }
 
   .langTog__cur {
-    border: 1px solid var(--color-light);
+    /* border: 1px solid var(--color-light); */
     padding: 0.2rem 0.4rem;
   }
 
@@ -128,7 +163,7 @@
   }
 
   .langTog__cur__arrow {
-    vertical-align: top;
+    vertical-align: middle;
     line-height: 1;
     margin-left: 0.2rem;
   }

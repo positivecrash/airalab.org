@@ -1,11 +1,13 @@
 - title: Our research
   link: /en/services/
-  
-- title: DAPP
-  link: https://dapp.airalab.org/
 
 - title: Contacts
   link: /en/contacts/
 
 - title: Donate
   link: /en/donation/
+  class: 'border-right'
+
+- title: DAPP
+  link: https://dapp.airalab.org/
+  class: 'border-right'

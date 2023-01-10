@@ -2,19 +2,19 @@
   
   <footer role="contentinfo">
       <div class="w-base">
-        <div class="footer-row d-t w-full">
+        <div class="footer-row w-full">
 
-          <div class="d-t_cell align-v-m">
-            <tenplate v-if=" lang == 'ru' ">
-              <g-link :to="$static.metadata.subscribeRU" target="_blank">Рассылка важных новостей</g-link>
-            </tenplate>
+          <div>
+            <template v-if=" lang == 'ru' ">
+             <p>Автономная некоммерческая организация «Исследовательский центр роботехники Аиралаб Рус»</p>
+            </template>
 
-            <tenplate v-if=" lang == 'en' ">
-              <g-link :to="$static.metadata.subscribeEN" target="_blank">Newsletter subscribe</g-link>
-            </tenplate>
+            <template v-if=" lang == 'en' ">
+              <p>NPO robotics research centre AIRALAB RUS</p>
+            </template>
           </div>
 
-          <div class="d-t_cell align-v-m t-align-right">{{string1}} <g-link :to="'mailto:'+$static.metadata.email" v-html="$static.metadata.email"/></div>
+          <div > <g-link :to="'mailto:'+$static.metadata.email" v-html="$static.metadata.email"/></div>
         </div>
       </div>
   </footer>
@@ -25,7 +25,7 @@
 <style scoped>
 
   footer[role='contentinfo'] {
-    background-color: #2c4c4b;
+    background-color: #454545;
     bottom: 0;
     color: var(--color-light);
     padding: 20px 0;
@@ -52,13 +52,14 @@
     max-width: 412px;
   }
 
-  @media screen and (max-width: 630px) {
-    .footer-row .d-t_cell {
-      display: block;
-      text-align: center;
-      padding-bottom: var(--space);
-    }
+  footer[role='contentinfo'] .footer-row  {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
+
 </style>
 
 <static-query>
@@ -79,18 +80,6 @@ export default {
 	props: {
       lang: { type: String, default: 'ru' }
   },
-
-  data(){
-    return {
-      string1: 'Пишите на:'
-    }
-  },
-
-  created: function() {
-    if ( this.lang === 'en' ){
-      this.string1 = 'Write us:'
-    }
-  }
 }
 
 </script>
