@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[28],{iyQ6:function(n,e,t){"use strict";t.r(e);var c={components:{Redirect:()=>t.e(2).then(t.bind(null,"crKJ"))}},i=t("KHd+"),l=Object(i.a)(c,(function(){return(0,this._self._c)("Redirect")}),[],!1,null,null,null);e.default=l.exports}}]);
