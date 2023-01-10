@@ -10,6 +10,7 @@
 
     <PageContent
       title = "Public Air Quality Monitoring Network"
+      subtitle = "Our research"
       description = "We have launched, continuously developing and increasing decentralized network of independent air sensors worldwide. 
       This can be helpful for all those interested in air pollution monitoring without any third party manipulation the results. 
       Make the invisible visible with already installed sensors by our community members or join with your sensor for free."
@@ -38,6 +39,8 @@
       endString5 = "help"
       endString6 = "donations from 100 rubles"
       linkDonate = "/en/donation"
+      donationButton="Support us"
+      specialClass="air-monitoring-en"
     />
   </LayoutEN>
 </template>
