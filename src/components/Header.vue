@@ -57,7 +57,9 @@
             </template>
 
             <li v-if="langs" class="langTog">
-              <a href="javascript:;" class="langTog__cur"><span class="langTog__cur__text">{{ lang }}</span> <span class="langTog__cur__arrow">&#9207;</span></a>
+              <a href="javascript:;" class="langTog__cur"><span class="langTog__cur__text">{{ lang }}</span> <span class="langTog__cur__arrow">
+                <g-image src="@/assets/images/arrow.svg"/>
+              </span></a>
 
               <ul class="langTog__menu">
                 <template v-for="(item, key) in langs">
@@ -163,9 +165,11 @@
   }
 
   .langTog__cur__arrow {
+    display: inline-block;
     vertical-align: middle;
     line-height: 1;
-    margin-left: 0.2rem;
+    margin-bottom: 4px;
+    margin-left: 0.3rem;
   }
 
   .langTog__menu {
@@ -220,6 +224,12 @@
       text-align: right;
       padding: calc( var(--paddings)/2 ) var(--paddings) 0;
     }
+
+    .header-nav-desktop li.border-right {
+      padding-right: 20px;
+    }
+
+
 
     #header-nav-toggler {
       display: block;

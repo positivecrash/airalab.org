@@ -20,7 +20,6 @@
       service3Title = "Water environmental inspector"
       service3Link = "/en/water-monitoring"
       service3Desc = "One of our ongoing developments is an unmanned surface catamaran-type environmental monitoring vehicle that collects water quality data."
-      imgClass="img-air-en"
     />
   </LayoutEN>
 </template>

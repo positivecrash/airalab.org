@@ -3,52 +3,48 @@
     <div class="page-inside donation">
 
     <div class="w-text">
-        <div class="texthighlight_yellow t-align-center">
-          <h1>{{ title }}</h1>
-        </div>
+      <div class="texthighlight_yellow t-align-center">
+        <h1>{{ title }}</h1>
       </div>
+    </div>
 
-      <div class="w-text section_half">
-        <p class="hyphens" v-html="text"/>
+    <section class="section-banner">
+      <div class="w-text donation-banner t-align-center" :class="lang === 'en' ? 'donation-banner-en' : ''">
+        <p v-html="text"/>
+        <p v-html="text2"/>
+      </div>
+    </section>
 
-        <!-- <p class="hyphens">
-          Мы российская автономная некоммерческая организация, занимаемся исследованиями 
-          в области Умных городов и Индустрии 4.0. При работе над проектами мы используем большое количество времени 
-          высококвалифицированных инженеров, деньги на сопутствующее оборудование, интернет и кофе. Познакомьтесь с 
-          нашей деятельностью, почитав <a href=' + this.$static.metadata.blogRU + ' target=_blank>блог</a> или <a href='/ru/services'>информацию о разработках</a></p> -->
 
+    <section class="section section-gray">
+      <div class="w-text">
         <h2>{{ description }}</h2>
 
-        <div class="grid-2">
-          <div class="qrcode section-bordered t-align-center">
-            <p><b>{{ qrcodeTitle }}</b></p>
-            <g-image src="~/assets/images/QR-donate.png" />
+
+        <form name="TinkoffPayForm" onsubmit="pay(this); return false;">
+          <input class="tinkoffPayRow" type="hidden" name="terminalkey" value="1538042640922">
+          <input class="tinkoffPayRow" type="hidden" name="frame" value="true">
+
+          <input class="tinkoffPayRow" type="hidden" name="language" :value="lang">
+
+          <input class="tinkoffPayRow" type="hidden" name="frame" value="false">
+        
+          <div class="inp-paysum" id="donation-sum">
+            <input id="sum" type="text" value="" :placeholder="donateTitle" required name="amount" class="tinkoffPayRow w-full">
           </div>
-      
-          <div class="section-bordered t-align-center">
-              <p><b>{{ donateTitle }}</b></p>
 
-              <form name="TinkoffPayForm" onsubmit="pay(this); return false;">
-                <input class="tinkoffPayRow" type="hidden" name="terminalkey" value="1538042640922">
-                <input class="tinkoffPayRow" type="hidden" name="frame" value="true">
-
-                <input class="tinkoffPayRow" type="hidden" name="language" :value="lang">
-
-                <input class="tinkoffPayRow" type="hidden" name="frame" value="false">
-              
-                <div class="inp-paysum" id="donation-sum">
-                  <input id="sum" type="text" value="" placeholder="0.00" required name="amount" class="tinkoffPayRow w-full">
-                </div>
-
-                <div class="btn-iconed btn-iconed--pay">
-                    <input class="btn btn-yellow w-full tinkoffPayRow" id="sum-submit" type="submit" :value="button">
-                </div>
-                <g-image class="i-payment-methods" alt="Visa, MasterCard, Maestro, МИР" src="~/assets/images/payment-methods.png"/>
-              </form>
-
-            </div>
+          <div>
+              <input class="btn btn-red w-full tinkoffPayRow" id="sum-submit" type="submit" :value="button">
           </div>
+          <g-image class="i-payment-methods" alt="Visa, MasterCard, Maestro, МИР" src="~/assets/images/payment-methods.png"/>
+        </form>
+
+        <div class="qrcode t-align-center">
+          <g-image src="~/assets/images/qrcode-in-bubble.png" />
+          <p><b>{{ qrcodeTitle }}</b></p>
+        </div>
       </div>
+    </section>
 
   </div>
 
@@ -56,19 +52,48 @@
 
 
 <style scoped>
-  .donation__banner {
-    display: block;
-    width: 900px;
-    max-width: 100%;
-    margin: calc(var(--space)*2) auto;
+
+  .donation.page-inside {
+    padding-bottom: 0;
   }
 
-  .donation .sec-bordered{
-    margin-top: calc(var(--space)*2);
+  .donation-banner {
+    min-height: 700px;
+    padding-bottom: 400px;
+    background-image: url('~@/assets/images/support-img.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+
+  .donation-banner p {
+    font-weight: 500;
+  }
+
+  .donation .section-gray {
+    position: relative;
+    margin-top: 0;
+    padding-bottom: 10rem;
+  }
+
+  .donation .section-gray .w-text {
+    padding-bottom: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .donation .section-gray h2 {
+    margin-bottom: calc(var(--space)*3);
+  }
+
+  .section-banner {
+    padding-bottom: 0;
   }
 
   .donation form {
-      max-width: 300px;
+      max-width: 345px;
       margin: 0 auto;
   }
   
@@ -79,7 +104,12 @@
   .donation .inp-paysum input {
     position: relative;
     z-index: 0;
-    text-align: center;
+    text-align: left;
+  }
+
+  .donation .inp-paysum input::placeholder {
+    font-weight: 500;
+    color: var(--color-dark);
   }
 
   .donation .inp-paysum:after {
@@ -96,6 +126,45 @@
     max-width: 100%;
     margin-top: var(--space);
   }
+
+  .qrcode {
+    position: absolute;
+    width: 318px;
+    height: 415px;
+    bottom: 134px;
+    left: calc(100% + 318px - 50vw);
+  }
+
+
+  @media screen and (max-width: 1270px) {
+    .qrcode {
+      position: static;
+    }
+
+    .donation .section-gray .w-text {
+      padding-bottom: 20px;
+    }
+
+    .donation form {
+      margin-bottom: calc(var(--space) * 2);
+    }
+  }
+
+
+  @media screen and (max-width: 670px) {
+    .donation-banner-en {
+      min-height: 467px;
+      padding-bottom: 206px;
+    }
+  }
+
+
+  @media screen and (max-width: 455px) {
+    .donation-banner {
+      min-height: 319px;
+      padding-bottom: 203px;
+    }
+  }
 </style>
 
 
@@ -105,6 +174,7 @@ export default {
   props: {
       title: { type: String, default: '' },
       text: { type: String, default: '' },
+      text2: { type: String, default: '' },
       qrcodeTitle: { type: String, default: '' },
       donateTitle: { type: String, default: '' },
       description: { type: String, default: '' },
@@ -163,25 +233,4 @@ export default {
 }
 </script>
 
-<style scoped>
-  /* .qrcode {
-    // margin-bottom: 40px;
-
-    img {
-      display: inline-block;
-      max-width: 100%;
-      width: 200px;
-    }
-  }
-
-  .grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-
-    @media screen and (max-width:570px) {
-      grid-template-columns: 1fr;
-    }
-  } */
-</style>
 

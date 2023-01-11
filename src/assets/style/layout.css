@@ -98,6 +98,11 @@ img {
 	.grid-c3{ grid-template-columns: 1fr 1fr 1fr; }
 }
 
+@media screen and (max-width: 960px) 
+{
+  .page-inside { padding-bottom: 10rem; }
+}
+
 @media screen and (max-width: 750px) 
 {
   html { font-size: 90%; }

@@ -6,7 +6,7 @@
       :metaDescription = "this.$static.metadata.siteDescriptionRU"
     />
 
-    <PageContent :title="'Контакты'" :organization="'АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ ИССЛЕДОВАТЕЛЬСКИЙ ЦЕНТР РОБОТОТЕХНИКИ АИРАЛАБ РУС'" :phoneTitle="'Телефон'" :lang="'ru'" />
+    <PageContent :title="'Контакты'" :organization="'АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ ИССЛЕДОВАТЕЛЬСКИЙ ЦЕНТР РОБОТОТЕХНИКИ АИРАЛАБ РУС'" :lang="'ru'" />
   </LayoutRU>
 </template>
 

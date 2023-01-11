@@ -9,7 +9,8 @@
     <PageContent
       :title = "'Service Public blockchain stamp for data in your production'"
       :description = "'Use the service from NPO robotics research centre Airalab Rus “Blockchain stamp”: issue web3 digital certificates and product passports and increase confidence in your products or services.'"
-      :subtitle = "'Our research'"
+      breadcrumb = "Our research"
+      breadcrumbLink = "en/services"
       :button1 = "'Write to us'"
       :block1title = "'How it works'"
       :block1description = "'You have 2 options for issuing a digital blockchain certificate for your product or service:'"
