@@ -56,7 +56,7 @@
 			</div>
 		</section>
 
-
+<!-- 
 		<section class="section section-yellow">
 			<div class="w-text t-align-center">
 				<h3 v-html="commitTitle"/>
@@ -64,7 +64,7 @@
 			</div>
 			<div class="hr-wave"></div>
 			<div id="yellowList" class="w-text t-align-center" v-html="commitSteps" />
-		</section>
+		</section> -->
 
 		<Donation :imgClass="imgClass" :donationLink="linkDonate" :donationButton="donationButton" :specialClass="specialClass"/>
 
