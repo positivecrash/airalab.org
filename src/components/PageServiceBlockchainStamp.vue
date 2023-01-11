@@ -4,7 +4,7 @@
     <div class="page-inside service">
 
     	<div class="w-text">
-					<h2 class="subtitle-blue">{{subtitle}}</h2>
+					<g-link class="breadcrumb-blue" :to="breadcrumbLink">{{breadcrumb}}</g-link>
 	        <div class="texthighlight_yellow t-align-center"><h1 v-html="title" /></div>
        	</div>
 
@@ -505,7 +505,8 @@ export default {
 	props: {
       title: { type: String, default: '' },
       description: { type: String, default: '' },
-			subtitle: { type: String, default: '' },
+			breadcrumb: { type: String, default: '' },
+			breadcrumbLink: { type: String, default: '' },
       button1: { type: String, default: '' },
 
       block1title: { type: String, default: '' },

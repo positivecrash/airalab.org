@@ -73,12 +73,8 @@
 }
 
 .item .img-air {
-  max-width: 588px;
-  top: -50px;
-}
-
-.item .img-air-en {
-  top: -82px;
+  max-width: 546px;
+  bottom: -9px;
 }
 
 .item .img-water {
@@ -108,7 +104,8 @@
 }
 
 .item button {
-  color: var(--color-blue)
+  color: var(--color-blue);
+  border-color: transparent;
 }
 
 @media screen and (max-width: 1200px) {

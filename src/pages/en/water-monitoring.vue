@@ -8,7 +8,8 @@
 
     <PageContent
       title = "Water environmental inspector"
-      subtitle = "Our research"
+      breadcrumb = "Our research"
+      breadcrumbLink = "en/services"
       description = "One of our ongoing developments is an unmanned surface catamaran-type environmental monitoring vehicle that collects water quality data."
       howToTitle = "How it works"
       howToListItem1 = "The device is equipped with a compact set of sensors, on-board navigation and network connectivity, which allows it to autonomously inspect water bodies."
@@ -53,7 +54,7 @@ export default {
         {
           id: 2,
           title: 'No analogues',
-          description: 'В настоящий момент нет готовых аналогов подобного уровня. In 2022, the team conducted successful test launches of WEI in adverse weather conditions and used this data to design a new version of the vehicle. In addition, significant progress has been made in the development of algorithms for the autonomous distribution of a fleet of such devices around pollution sources.'
+          description: 'In 2022, the team conducted successful test launches of WEI in adverse weather conditions and used this data to design a new version of the vehicle. In addition, significant progress has been made in the development of algorithms for the autonomous distribution of a fleet of such devices around pollution sources.'
         }
       ]
     }

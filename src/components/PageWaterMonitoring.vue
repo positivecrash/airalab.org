@@ -4,13 +4,14 @@
   <div id="waterMonitoring" class="page-inside service">
 
     <div class="w-text">
-      <h2 class="subtitle-blue">{{subtitle}}</h2>
+      <g-link class="breadcrumb-blue" :to="breadcrumbLink">{{breadcrumb}}</g-link>
+      
       <div class="texthighlight_yellow t-align-center"><h1 v-html="title" /></div>
     </div>
 
     <div class="w-text t-align-center water-monitoring__banner">
       <g-image id="banner" src="@/assets/images/water-monitoring-banner.png" alt="Banner for Water monitoring" />
-      <p>{{description}}</p>
+      <p class="w-text">{{description}}</p>
     </div>
 
 
@@ -71,6 +72,7 @@
 
 .water-monitoring__banner {
   font-weight: 500;
+  max-width: 1000px;
 }
 
 #yellowList { font-weight: 500; }
@@ -128,7 +130,8 @@ export default {
 
 props: {
     title: { type: String, default: '' },
-    subtitle: { type: String, default: '' },
+    breadcrumb: { type: String, default: '' },
+		breadcrumbLink: { type: String, default: '' },
     description: { type: String, default: '' },
     howToTitle: { type: String, default: '' },
     howToListItem1: { type: String, default: '' },

@@ -4,7 +4,7 @@
     <div class="page-inside service air-monitoring">
 
     	<div class="w-text">
-					<h2 class="subtitle-blue">{{subtitle}}</h2>
+					<g-link class="breadcrumb-blue" :to="breadcrumbLink">{{breadcrumb}}</g-link>
 	        <div class="texthighlight_yellow t-align-center"><h1 v-html="title" /></div>
        	</div>
 
@@ -172,7 +172,8 @@ export default {
 
 	props: {
       title: { type: String, default: '' },
-			subtitle: { type: String, default: '' },
+			breadcrumb: { type: String, default: '' },
+			breadcrumbLink: { type: String, default: '' },
       description: { type: String, default: '' },
       button: { type: String, default: '' },
       h21: { type: String, default: '' },
