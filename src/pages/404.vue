@@ -1,6 +1,6 @@
 <template>
 
-  <LayoutRU v-if="lang === 'RU'">
+  <LayoutRU v-if="lang === 'RU' && !isRedirect">
     <MetaInfo
       :metaSiteName = "this.$static.metadata.siteNameRU"
       metaTitle = "Страница не найдена"
@@ -51,7 +51,8 @@ export default {
 
   data() {
     return {
-      lang: 'EN'
+      lang: 'EN',
+      isRedirect: true,
     }
   },
 
@@ -61,6 +62,12 @@ export default {
     if(this.$route.path.includes('ru')) {
       this.lang = 'RU'
     } 
+
+    if(this.$route.path.includes('nko-otchet')) {
+      window.location.href = '/nko-otchet'
+    } else {
+      this.isRedirect = false
+    }
   }
 
 }
