@@ -470,7 +470,7 @@
 }
 
 .stampTech__product.in-viewport .stampTech__product__color .item {
-	animation: moveProd var(--duration-product) ease var(--duration-product)/2 infinite backwards, fadeIn 0.2s linear var(--duration-product)/2 forwards;
+	animation: moveProd var(--duration-product) ease calc(var(--duration-product)/2 ) infinite backwards, fadeIn 0.2s linear calc(var(--duration-product)/2) forwards;
 }
 
 @media screen and (max-width: 1000px) {
