@@ -17,4 +17,10 @@ body {
 	--space: 1.6rem;
   	--width-text: 820px;
   	--width-base: 1280px;
+
+
+	
+		--aira-flot-blue: #30CAFF;
+		--aira-flot-dark-blue: #0068B3;
+		--aira-flot-darkest-blue: #003D7C;
 }

@@ -88,7 +88,7 @@
 
     padding: 20px 0;
     position: relative;
-    z-index: 10;
+    z-index: 40;
   }
 
   .header a, .header a:hover, .header a:focus, .header a:visited {

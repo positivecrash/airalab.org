@@ -1,6 +1,9 @@
 - title: Our research
   link: /en/services/
 
+- title: Projects
+  link:  /en/projects/
+
 - title: Contacts
   link: /en/contacts/
 
@@ -11,3 +14,4 @@
 - title: DAPP
   link: https://dapp.airalab.org/
   class: 'border-right'
+
