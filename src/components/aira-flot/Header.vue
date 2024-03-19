@@ -1,7 +1,7 @@
 <template>
   <header class="aira-flot-header">
     <div class="aira-flot-layout aira-flot-header__container">
-      <g-link to="/">
+      <g-link to="/ru/aira-flot">
         <g-image src="@/assets/images/aira-flot/logo.svg" alt="logo"/>
       </g-link>
       <button class="burger header__burger" :class="{'burger--active': isOpen}" aria-label="Открыть меню сайта" @click="isOpen = !isOpen">
@@ -10,22 +10,19 @@
       <nav class="aira-flot-nav" :class="{'aira-flot-nav--active': isOpen}">
         <ul class="aira-flot-nav__list">
           <li class="aira-flot-nav__item">
-            <g-link to="/" class="aira-flot-link aira-flot-nav__link">О разработке</g-link>
+            <a href="#demo" class="aira-flot-link aira-flot-nav__link">Заказать демо</a>
           </li>
           <li class="aira-flot-nav__item">
-            <g-link to="/" class="aira-flot-link aira-flot-nav__link">Заказать демо</g-link>
+            <a href="#qa" class="aira-flot-link aira-flot-nav__link">Q&A</a>
           </li>
           <li class="aira-flot-nav__item">
-            <g-link to="/" class="aira-flot-link aira-flot-nav__link">Q&A</g-link>
-          </li>
-          <li class="aira-flot-nav__item">
-            <g-link to="/" class="aira-flot-link aira-flot-nav__link">Аиралабрус</g-link>
+            <a href="#projects" class="aira-flot-link aira-flot-nav__link">Проекты АираФлот</a>
           </li>
         </ul>
       </nav>
-      <g-link class="aira-flot-header__sk-logo" to="/">
+      <span class="aira-flot-header__sk-logo">
         <g-image  src="@/assets/images/aira-flot/logo-sk.svg" alt="sk logo"/>
-      </g-link>
+      </span>
     </div>
   </header>
 </template>

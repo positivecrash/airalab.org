@@ -15,12 +15,14 @@ body {
 
 	--paddings: 20px;
 	--space: 1.6rem;
-  	--width-text: 820px;
-  	--width-base: 1280px;
+	--width-text: 820px;
+	--width-base: 1280px;
 
 
 	
-		--aira-flot-blue: #30CAFF;
-		--aira-flot-dark-blue: #0068B3;
-		--aira-flot-darkest-blue: #003D7C;
+	--aira-flot-dark: #000000;
+	--aira-flot-blue: #0FA6FB;
+	--aira-flot-lightest-blue: #30caff;
+	--aira-flot-dark-blue: #0068B3; 
+	--aira-flot-darkest-blue: #003D7C;
 }
