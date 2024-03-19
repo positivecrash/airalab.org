@@ -1,3 +1,6 @@
+html {
+  scroll-behavior:smooth
+}
 
 .aira-flot-layout { 
   max-width: 1600px;
@@ -7,8 +10,63 @@
   color: var(--color-light);
 }
 
+.aira-flot-section {
+  margin-bottom: calc(var(--space) * 3);
+}
+
+.aira-flot-section > .aira-flot-layout {
+  color: var(--aira-flot-dark) ;
+}
+
+.aira-flot-grid-3 {
+  display: grid;
+  grid-template-columns: minmax(200px, 285px) minmax(240px, 490px) minmax(200px, 285px);
+  justify-content: center;
+  gap: var(--space);
+}
+
+.aira-flot-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space);
+}
+
 .aira-flot li {
   margin: 0;
+}
+
+
+.aira-flot__title {
+  font-size: calc(var(--text-size-base) * 1.3);
+  font-weight: 500;
+  color: var(--aira-flot-dark);
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.aira-flot__title.center {
+  text-align: center;
+  max-width: 616px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.aira-flot__title-accent {
+  position: relative;
+  font-style: italic;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.aira-flot__title-accent::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background-color: var(--aira-flot-lightest-blue);
+  z-index: -1;
 }
 
 .aira-flot-link {
@@ -41,4 +99,51 @@
 
 .aira-flot-btn--dark {
   background-color: var(--aira-flot-dark-blue)
+}
+
+.aira-flot-btn:hover {
+  color: var(--color-light)
+}
+
+.aira-flot-image {
+  max-height: 285px;
+  width: 100%
+}
+
+.aira-flot-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 60px;
+  object-fit: cover;
+}
+
+.aira-flot-pill__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.aira-flot-pill {
+  padding: calc(var(--space) * 0.5) calc(var(--space) * 0.9);
+  font-weight: 500;
+  background-color: var(--aira-flot-blue);
+  border-radius: 120px;
+  text-align: center;
+  color: var(--color-light)
+}
+
+@media screen and (max-width:960px) {
+
+  .aira-flot-grid-3,
+  .aira-flot-grid-2 {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .aira-flot-layout {
+    padding: calc(var(--space) * 0.5) calc(var(--space) * 0.8);
+  }
+  
 }
