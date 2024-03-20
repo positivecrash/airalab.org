@@ -205,10 +205,18 @@ export default {
 
   @media screen and (max-width: 610px) {
     
+    .aira-flot-banner {
+      background-image: url('../../assets/images/aira-flot/bg-all-mobile.png');
+    } 
 
     .aira-flot-banner__boat {
       max-width: 240px;
-      bottom: 880px;
+      width: 70%;
+      bottom: 860px;
+      right: unset;
+      left: 50%;
+      transform: translateX(-48%);
+      z-index: 0;
     }
 
     .aira-flot-banner__config {
@@ -225,12 +233,18 @@ export default {
   }
 
   @media screen and (max-width: 440px) {
+
+    .aira-flot-banner {
+      min-height: 1586px;
+    }
     
     .aira-flot-banner__text {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      z-index: 5;
     }
 
     .aira-flot__title {
@@ -240,6 +254,10 @@ export default {
 
     .aira-flot-banner__config {
       bottom: 132px;
+    }
+
+    .aira-flot-banner__boat {
+      max-width: 320px;
     }
   }
 

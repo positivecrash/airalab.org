@@ -177,6 +177,10 @@ export default {
     text-decoration: underline;
   }
 
+  .aira-flot-nav__link:hover {
+    color: var(--aira-flot-dark-blue);
+  }
+
   .aira-flot-nav__item:not(:last-child) {
     margin-right: 0;
     margin-bottom: calc(var(--space) * 0.8);

@@ -80,7 +80,7 @@ export default {
 
 .aira-flot-footer__contacts a {
   color: var(--color-light);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .aira-flot-footer__contacts a:hover {
@@ -167,6 +167,7 @@ export default {
 
   .aira-flot-footer__other {
     background-size: cover;
+    min-height: 383px;
   }
 }
 
@@ -182,9 +183,14 @@ export default {
     z-index: 5;
   }
 
+  .aira-flot-footer__airaflot-logo {
+    width: 40%;
+  }
+
   .aira-flot-footer__sk-logo {
     position: absolute;
     bottom: 50px;
+    width: 40%;
     left: 0;
     right: unset;
   }
