@@ -96,12 +96,12 @@ export default {
   position: relative;
   margin: 8px 0;
   padding: calc(var(--space) * 0.4) var(--space);
-  border-radius: 80px;
+  border-radius: 28px;
   background-color: var(--aira-flot-blue);
+  transition: all 0.3s ease-in-out;
 }
 
 .qa__item--active {
-  border-radius: 40px;
   padding: calc(var(--space)* 1.5) var(--space);
 }
 
@@ -124,7 +124,7 @@ export default {
 .qa__body {
   height: 0;
   overflow: hidden;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 
 .qa__icon {
@@ -164,14 +164,21 @@ export default {
 
   .qa__item {
     padding: calc(var(--space) * 0.5) calc(var(--space) * 1.2 );
-    border-radius: 40px;
   }
   .qa__header span {
     max-width: 260px;
   }
 
+
   .qa__icon {
-    right: 26px;
+    right: 36px;
+    width: 2px;
+    height: 20px;
+  }
+
+  .qa__icon::after {
+    width: 2px;
+    height: 20px;
   }
 
 

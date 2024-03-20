@@ -81,13 +81,6 @@ export default {
     cursor: pointer;
   }
 
-  .aira-flot-advantages__item-header img {
-    width: 74px;
-    height: 74px;
-    border-radius: 100%;
-    background-color: lavender;
-  }
-
   .aira-flot-advantages__item-header button {
     padding: var(--space);
     border: 1px solid transparent;

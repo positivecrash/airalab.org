@@ -207,7 +207,8 @@ export default {
     
 
     .aira-flot-banner__boat {
-      display: none;
+      max-width: 240px;
+      bottom: 880px;
     }
 
     .aira-flot-banner__config {
@@ -238,7 +239,7 @@ export default {
 
 
     .aira-flot-banner__config {
-      bottom: 80px;
+      bottom: 132px;
     }
   }
 
