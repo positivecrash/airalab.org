@@ -51,12 +51,17 @@ html {
   margin-left: auto;
 }
 
+.aira-flot__title.mobile {
+  display: none;
+}
+
 .aira-flot__title-accent {
   position: relative;
   font-style: italic;
   font-weight: 600;
   z-index: 2;
 }
+
 
 .aira-flot__title-accent::after {
   content: '';
@@ -65,8 +70,8 @@ html {
   left: 0;
   width: 100%;
   height: 16px;
-  background-color: var(--aira-flot-lightest-blue);
   z-index: -1;
+  background-color: var(--aira-flot-lightest-blue);
 }
 
 .aira-flot-link {
@@ -165,4 +170,16 @@ html {
     padding: calc(var(--space) * 0.5) calc(var(--space) * 0.8);
   }
   
+}
+
+@media screen and (max-width: 620px) {
+
+  .aira-flot__title.desktop {
+    display: none;
+    height: 0;
+  }
+  .aira-flot__title.mobile {
+    margin-top: 0;
+    display: block;
+  }
 }

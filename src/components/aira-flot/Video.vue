@@ -5,8 +5,11 @@
       <span>Россия24: репортаж об испытаниях водного дрона на реках Волгоградской области</span>
     </div>
     <div class="aira-flot__video__text">
-      <h2 class="aira-flot__title">
+      <h2 class="aira-flot__title desktop">
         <span class="aira-flot__title-accent">Опыт применения</span>
+      </h2>
+      <h2 class="aira-flot__title mobile">
+        Опыт <span class="aira-flot__title-accent">применения</span>
       </h2>
       <p> <b>Испытания проводились по техническому заданию заказчиков</b> в разных погодных условиях, включая температуру воздуха до -10°С  и небольшой лед на водоеме, с применением различного контрольно-измерительного оборудования и оснащения.</p>
     </div>
@@ -45,7 +48,7 @@ export default {
     max-width: 60%;
   }
 
-  .aira-flot__video__text h2 {
+  .aira-flot__video__text .aira-flot__title {
     margin-bottom: calc(var(--space) * 0.5);
   }
 

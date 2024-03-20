@@ -77,14 +77,20 @@ export default {
   .aira-flot-advantages__item-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     cursor: pointer;
+    margin-bottom: var(--space);;
   }
 
   .aira-flot-advantages__item-header button {
     padding: var(--space);
     border: 1px solid transparent;
     background: transparent;
+  }
+
+  .aira-flot-advantages__item-title {
+    margin-top: var(--space);
+    margin-bottom: var(--space);
   }
 
   .aira-flot-advantages__item-toggler {
