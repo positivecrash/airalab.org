@@ -54,9 +54,9 @@ export default {
   position: relative;
   min-height: 660px;
   padding-top: calc(var(--space) * 3);
-  background-image: url('../../assets/images/aira-flot/watery-bg-footer.png');
-  background-size: 100% 100%;
-  background-position: center 280px;
+  background-image: url('../../assets/images/aira-flot/watery-bg.png');
+  background-size: 100%;
+  background-position: center 450px;
   background-repeat: no-repeat;
   background-color: var(--aira-flot-blue);
 }
@@ -90,7 +90,7 @@ export default {
 .aira-flot-footer__boat {
   position: absolute;
   max-width: 466px;
-  bottom: 210px;
+  bottom: 96px;
   right: 200px;
 }
 
@@ -130,6 +130,7 @@ export default {
 @media screen and (max-width: 1042px) {
   .aira-flot-footer__boat {
     max-width: 320px;
+    bottom: 125px;
   }
 }
 
@@ -141,14 +142,27 @@ export default {
 }
 
 @media screen and (max-width: 860px) {
+  .aira-flot-footer__top {
+    min-height: 586px;
+    background-position: bottom;
+    background-size: contain;
+  }
+
   .aira-flot-footer__other {
     min-height: 500px;
   }
 }
 
 @media screen and (max-width: 620px) {
+
+  .aira-flot-footer__top {
+    background-size: 300%;
+    background-position: center 428px;
+  }
+
   .aira-flot-footer__boat {
     right: 20px;
+    bottom: 86px;
   }
 
   .aira-flot-footer__other {
@@ -158,7 +172,14 @@ export default {
 
 @media screen and (max-width: 410px) {
   .aira-flot-footer__boat {
-    display: none;
+    max-width: 258px;
+    bottom: 70px;
+    z-index: 0;
+  }
+
+  .aira-flot-footer__contacts {
+    position: relative;
+    z-index: 5;
   }
 
   .aira-flot-footer__sk-logo {

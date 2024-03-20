@@ -64,7 +64,7 @@
           </h2>
           <div class="aira-flot-trust__wrapper">
             <div class="aira-flot-trust__item">
-              <g-image src="@/assets/images/aira-flot/tolyatti.png" class="aira-flot-trust__logo" alt="Администрация города Тольятти"/>
+              <g-image src="@/assets/images/aira-flot/tolyatti.png" class="aira-flot-trust__logo aira-flot-trust__logo--tl" alt="Администрация города Тольятти"/>
               <span class="aira-flot-trust__text">Администрация города Тольятти</span>
             </div>
             <div class="aira-flot-trust__item">
@@ -272,7 +272,7 @@ export default {
   }
 
   .aira-flot-trust__item {
-    padding: calc(var(--space) * 0.9);
+    padding: calc(var(--space) * 0.9) calc(var(--space) * 1.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -283,6 +283,10 @@ export default {
   .aira-flot-trust__logo {
     max-width: 58px;
     width: 100%;
+  }
+
+  .aira-flot-trust__logo--tl {
+    max-width: 40px;
   }
 
   .aira-flot-trust__logo--nornikel {
