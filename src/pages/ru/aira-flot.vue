@@ -92,10 +92,10 @@
       <section class="aira-flot-section aira-flot-trials">
         <div class="aira-flot-layout">
           <h2 class="aira-flot__title center desktop">
-            <span class="aira-flot__title-accent"> Испытания водного&nbsp;  дрона-эколога</span> 
+            <span class="aira-flot__title-accent"> Испытания водного  дрона-эколога</span> были проведены в следующих местах
           </h2>
           <h2 class="aira-flot__title center mobile">
-            <span class="aira-flot__title-accent"> Испытания </span> водного&nbsp; дрона-эколога были проведены в следующих местах
+            <span class="aira-flot__title-accent"> Испытания </span> водного дрона-эколога были проведены в следующих местах
           </h2>
           <div class="aira-flot-trials__wrapper aira-flot-pill__wrapper">
             <span v-for="trial in trials" :key="trial.id" class="aira-flot-pill config__item">{{ trial.text }}</span>
