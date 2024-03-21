@@ -139,7 +139,7 @@ export default {
   .aira-flot-nav {
     /* order: 2; */
     position: absolute;
-    width: 50%;
+    width: 60%;
     height: 100vh;
     right: 0;
     top: 0px;
@@ -202,6 +202,7 @@ export default {
   .aira-flot-nav{
     width: 100%;
     padding: 0;
+    z-index: 10;
   }
 
   .aira-flot-nav::after {
