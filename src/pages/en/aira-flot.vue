@@ -41,8 +41,11 @@
       <!-- advantages section -->
       <section class="aira-flot-section aira-flot-advantages">
         <div class="aira-flot-layout">
-          <h2 class="aira-flot__title center">
+          <h2 class="aira-flot__title center desktop">
             <span class="aira-flot__title-accent">Преимущества водного дрона</span> перед существующими способами мониторинга водных объектов
+          </h2>
+          <h2 class="aira-flot__title center mobile">
+            <span class="aira-flot__title-accent">Преимущества</span> водного дрона перед существующими способами мониторинга водных объектов
           </h2>
           <div class="aira-flot-advantages__wrapper">
             <AdvantagesItem
@@ -64,7 +67,7 @@
           </h2>
           <div class="aira-flot-trust__wrapper">
             <div class="aira-flot-trust__item">
-              <g-image src="@/assets/images/aira-flot/tolyatti.png" class="aira-flot-trust__logo" alt="Администрация города Тольятти"/>
+              <g-image src="@/assets/images/aira-flot/tolyatti.png" class="aira-flot-trust__logo aira-flot-trust__logo--tl" alt="Администрация города Тольятти"/>
               <span class="aira-flot-trust__text">Администрация города Тольятти</span>
             </div>
             <div class="aira-flot-trust__item">
@@ -88,8 +91,11 @@
       <!-- trials section -->
       <section class="aira-flot-section aira-flot-trials">
         <div class="aira-flot-layout">
-          <h2 class="aira-flot__title center">
-            <span class="aira-flot__title-accent">Испытания водного дрона-эколога</span> были проведены в следующих местах
+          <h2 class="aira-flot__title center desktop">
+            <span class="aira-flot__title-accent"> Испытания водного  дрона-эколога</span> были проведены в следующих местах
+          </h2>
+          <h2 class="aira-flot__title center mobile">
+            <span class="aira-flot__title-accent"> Испытания </span> водного дрона-эколога были проведены в следующих местах
           </h2>
           <div class="aira-flot-trials__wrapper aira-flot-pill__wrapper">
             <span v-for="trial in trials" :key="trial.id" class="aira-flot-pill config__item">{{ trial.text }}</span>
@@ -119,7 +125,7 @@
 <static-query>
   query {
     metadata {
-      siteNameRU
+      siteNameEN
     }
   }
 </static-query>
@@ -272,7 +278,7 @@ export default {
   }
 
   .aira-flot-trust__item {
-    padding: calc(var(--space) * 0.9);
+    padding: calc(var(--space) * 0.9) calc(var(--space) * 1.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -283,6 +289,10 @@ export default {
   .aira-flot-trust__logo {
     max-width: 58px;
     width: 100%;
+  }
+
+  .aira-flot-trust__logo--tl {
+    max-width: 40px;
   }
 
   .aira-flot-trust__logo--nornikel {
