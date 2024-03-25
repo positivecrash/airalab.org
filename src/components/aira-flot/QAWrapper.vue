@@ -98,7 +98,7 @@ export default {
   padding: calc(var(--space) * 0.4) var(--space);
   border-radius: 28px;
   background-color: var(--aira-flot-blue);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s;
 }
 
 .qa__item--active {
@@ -124,7 +124,8 @@ export default {
 .qa__body {
   height: 0;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s;
+  overflow-y: auto;
 }
 
 .qa__icon {
@@ -163,12 +164,11 @@ export default {
 @media screen and (max-width: 570px) {
 
   .qa__item {
-    padding: calc(var(--space) * 0.5) calc(var(--space) * 1.2 );
+    padding: calc(var(--space) * 0.5) calc(var(--space) * 1.2);
   }
   .qa__header span {
     max-width: 260px;
   }
-
 
   .qa__icon {
     right: 36px;
@@ -180,6 +180,7 @@ export default {
     width: 2px;
     height: 20px;
   }
+  
 
 
 }
