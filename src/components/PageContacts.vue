@@ -20,6 +20,7 @@
           <a href="tel:+79171569724">+7 (917) 156-97-24</a>
         </div>
         <address><b> {{ address }}:  </b><br/>{{addressDescription}}</address>
+        <p v-if="lang == 'ru'">Технологический стэк: Python, JavaScript, Vue, Rust, Haskell</p>
       </div>
   </div>
   
